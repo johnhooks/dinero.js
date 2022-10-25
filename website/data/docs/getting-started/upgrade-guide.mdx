@@ -132,12 +132,12 @@ Former methods and new functions don't all have the same signature. Refer to the
 
 <Scrollable>
 
-| Dinero v1.x                 | Dinero v2                                                            |
-|-----------------------------|----------------------------------------------------------------------|
-| `d1.toFormat(format)`       | [`toFormat(d1, ...args)`](/docs/api/formatting/to-format)            |
-| `d1.toObject()`             | [`toSnapshot(d1)`](/docs/api/formatting/to-snapshot)                 |
-| `d1.toUnit(...args)`        | [`toUnit(d1, ...args)`](/docs/api/formatting/to-unit)                |
-| `d1.toRoundedUnit(...args)` | [`toUnit(d1, ...args)`](/docs/api/formatting/to-unit)                |
+| Dinero v1.x                 | Dinero v2                                                                              |
+|-----------------------------|----------------------------------------------------------------------------------------|
+| `d1.toFormat(format)`       | [`toFormat(d1, ...args)`](/docs/api/formatting/to-format)                              |
+| `d1.toObject()`             | [`toSnapshot(d1)`](/docs/api/formatting/to-snapshot)                                   |
+| `d1.toUnit(...args)`        | Dropped, [see replacement](#replace-tounit-and-toroundedunit-with-tounits-or-toformat) |
+| `d1.toRoundedUnit(...args)` | Dropped, [see replacement](#replace-tounit-and-toroundedunit-with-tounits-or-toformat) |
 
 </Scrollable>
 
@@ -277,6 +277,28 @@ Dinero.js v2 no longer has a built-in `percentage` function. You can build your 
   ]}
 />
 
+## Replace toUnit and toRoundedUnit with toUnits or toFormat
+
+Dinero.js v2 no longer has a built-in `toUnit` and `toRoundedUnit` functions. Use [`toUnits`](/docs/api/formatting/to-units) or [`toFormat`](/docs/api/formatting/to-format) instead.
+
+<Panel
+  groups={[
+    {
+      label: 'API',
+      links: [
+        {
+          title: 'To unit',
+          url: '/docs/api/formatting/to-unit',
+        },
+        {
+          title: 'To format',
+          url: '/docs/api/formatting/to-format',
+        },
+      ],
+    },
+  ]}
+/>
+
 ## Dropped support for locale
 
 In v1.x, object formatting relied upon the [Internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl). You could pass a locale to each Dinero object to control how to format it. In v2, formatting is dependency-free and provides you full control. You no longer need to rely on a locale, therefore this concept is gone.
@@ -287,8 +309,8 @@ To replicate the same formatting you had in v1.x, you can create a formatter tha
 import { toFormat } from 'dinero.js';
 
 function createIntlFormatter(locale, options = {}) {
-  function transformer({ amount, currency }) {
-    return amount.toLocaleString(locale, {
+  function transformer({ decimal, currency }) {
+    return Number(decimal).toLocaleString(locale, {
       ...options,
       style: 'currency',
       currency: currency.code,
