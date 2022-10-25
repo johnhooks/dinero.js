@@ -9,6 +9,8 @@ import type { TransformScaleParams } from '@dinero.js/core';
  * @param divide - A custom divide function.
  *
  * @returns A new Dinero object.
+ *
+ * @public
  */
 export function transformScale<TAmount>(
   ...[dineroObject, newScale, divide]: TransformScaleParams<TAmount>
