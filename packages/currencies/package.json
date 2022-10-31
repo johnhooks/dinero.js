@@ -1,6 +1,6 @@
 {
   "name": "@bitmachina/dinero-currencies",
-  "version": "2.0.0-alpha.8",
+  "version": "2.0.0-alpha.9",
   "description": "Common currency implementations for Dinero.js",
   "keywords": [
     "money",
@@ -39,9 +39,7 @@
     "168": "dist/esm/168.js",
     "latest": "dist/esm/latest.js"
   },
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "scripts": {
     "build:clean": "rimraf ./{dist,temp}",
     "build:tsc": "tsc -b",
@@ -52,6 +50,6 @@
     "lint:fix": "eslint --config ../../.eslintrc.js --ext .js,.ts --fix ."
   },
   "devDependencies": {
-    "@bitmachina/dinero-core": "workspace:*"
+    "@bitmachina/dinero-core": "2.0.0-alpha.9"
   }
 }
