@@ -3,6 +3,9 @@ import { equal } from '../utils';
 
 export type IsZeroParams<TAmount> = readonly [dineroObject: Dinero<TAmount>];
 
+/**
+ * @internal
+ */
 export function isZero<TAmount>(calculator: Calculator<TAmount>) {
   const equalFn = equal(calculator);
 

@@ -1,4 +1,4 @@
-import { toSnapshot as coreToSnapshot } from '@dinero.js/core';
+import { toSnapshot as coreToSnapshot } from '@bitmachina/dinero-core';
 
 /**
  * Get a snapshot of a Dinero object.
@@ -6,5 +6,7 @@ import { toSnapshot as coreToSnapshot } from '@dinero.js/core';
  * @param dineroObject - The Dinero object to transform.
  *
  * @returns A snapshot of the object.
+ *
+ * @public
  */
 export const toSnapshot = coreToSnapshot;

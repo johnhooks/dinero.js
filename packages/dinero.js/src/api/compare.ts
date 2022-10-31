@@ -1,5 +1,5 @@
-import { safeCompare } from '@dinero.js/core';
-import type { CompareParams } from '@dinero.js/core';
+import { safeCompare } from '@bitmachina/dinero-core';
+import type { CompareParams } from '@bitmachina/dinero-core';
 
 /**
  * Compare the value of a Dinero object relative to another.
@@ -8,6 +8,8 @@ import type { CompareParams } from '@dinero.js/core';
  * @param comparator - The Dinero object to compare to.
  *
  * @returns One of -1, 0, or 1 depending on whether the first Dinero object is less than, equal to, or greater than the other.
+ *
+ * @public
  */
 export function compare<TAmount>(
   ...[dineroObject, comparator]: CompareParams<TAmount>

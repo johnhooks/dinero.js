@@ -1,11 +1,11 @@
 /* eslint-disable functional/no-expression-statement */
-import { calculator } from '@dinero.js/calculator-number';
+import { calculator } from '@bitmachina/dinero-calculator-number';
 import {
   createDinero,
   assert,
   INVALID_AMOUNT_MESSAGE,
   INVALID_SCALE_MESSAGE,
-} from '@dinero.js/core';
+} from '@bitmachina/dinero-core';
 
 /**
  * Create a Dinero object.
@@ -15,6 +15,8 @@ import {
  * @param options.scale - The number of decimal places to represent.
  *
  * @returns The created Dinero object.
+ *
+ * @public
  */
 export const dinero = createDinero({
   calculator,

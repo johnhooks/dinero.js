@@ -3,15 +3,16 @@ export * from './dinero';
 export type {
   Calculator,
   ComparisonOperator,
+  Currency,
   Dinero,
   DineroFactory,
   DineroOptions,
   DineroSnapshot,
+  DivideOperation,
   Formatter,
   Rates,
-  RoundingOptions,
   Transformer,
-} from '@dinero.js/core';
+} from '@bitmachina/dinero-core';
 export {
   createDinero,
   down,
@@ -22,5 +23,4 @@ export {
   halfTowardsZero,
   halfUp,
   up,
-} from '@dinero.js/core';
-export type { Currency } from '@dinero.js/currencies';
+} from '@bitmachina/dinero-core';

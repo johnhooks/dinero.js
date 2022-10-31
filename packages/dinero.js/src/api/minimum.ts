@@ -1,5 +1,5 @@
-import { safeMinimum } from '@dinero.js/core';
-import type { MinimumParams } from '@dinero.js/core';
+import { safeMinimum } from '@bitmachina/dinero-core';
+import type { MinimumParams } from '@bitmachina/dinero-core';
 
 /**
  * Get the lowest of the passed Dinero objects.
@@ -7,6 +7,8 @@ import type { MinimumParams } from '@dinero.js/core';
  * @param dineroObjects - The Dinero objects to minimum.
  *
  * @returns A new Dinero object.
+ *
+ * @public
  */
 export function minimum<TAmount>(...[dineroObjects]: MinimumParams<TAmount>) {
   const { calculator } = dineroObjects[0];

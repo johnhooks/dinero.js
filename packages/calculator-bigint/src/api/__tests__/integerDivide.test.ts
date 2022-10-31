@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import { integerDivide } from '../integerDivide';
 
 describe('integerDivide', () => {

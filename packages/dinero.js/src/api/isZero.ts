@@ -1,5 +1,5 @@
-import { isZero as coreIsZero } from '@dinero.js/core';
-import type { IsZeroParams } from '@dinero.js/core';
+import { isZero as coreIsZero } from '@bitmachina/dinero-core';
+import type { IsZeroParams } from '@bitmachina/dinero-core';
 
 /**
  * Check whether the value of a Dinero object is zero.
@@ -7,6 +7,8 @@ import type { IsZeroParams } from '@dinero.js/core';
  * @param dineroObject - The Dinero object to check.
  *
  * @returns Whether the value of a Dinero object is zero.
+ *
+ * @public
  */
 export function isZero<TAmount>(...[dineroObject]: IsZeroParams<TAmount>) {
   const { calculator } = dineroObject;

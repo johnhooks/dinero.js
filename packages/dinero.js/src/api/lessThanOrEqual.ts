@@ -1,5 +1,5 @@
-import { safeLessThanOrEqual } from '@dinero.js/core';
-import type { LessThanOrEqualParams } from '@dinero.js/core';
+import { safeLessThanOrEqual } from '@bitmachina/dinero-core';
+import type { LessThanOrEqualParams } from '@bitmachina/dinero-core';
 
 /**
  * Check whether the value of a Dinero object is lesser than or equal to another.
@@ -8,6 +8,8 @@ import type { LessThanOrEqualParams } from '@dinero.js/core';
  * @param comparator - The Dinero object to compare to.
  *
  * @returns Whether the Dinero to compare is lesser than or equal to the other.
+ *
+ * @public
  */
 export function lessThanOrEqual<TAmount>(
   ...[dineroObject, comparator]: LessThanOrEqualParams<TAmount>

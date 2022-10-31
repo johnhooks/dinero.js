@@ -1,10 +1,18 @@
+import type { Calculator } from '../types';
+
+import { equal, absolute } from '.';
+
 /**
- * Return whether a number is half.
- *
- * @param value - The number to test.
- *
- * @returns Whether the number is half.
+ * @internal
  */
-export function isHalf(value: number) {
-  return Math.abs(value) % 1 === 0.5;
+export function isHalf<TAmount>(calculator: Calculator<TAmount>) {
+  const equalFn = equal(calculator);
+  const absoluteFn = absolute(calculator);
+
+  return (input: TAmount, total: TAmount) => {
+    const remainder = absoluteFn(calculator.modulo(input, total));
+    const difference = calculator.subtract(total, remainder);
+
+    return equalFn(difference, remainder);
+  };
 }

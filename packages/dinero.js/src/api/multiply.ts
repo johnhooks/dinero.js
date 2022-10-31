@@ -1,5 +1,5 @@
-import { multiply as coreMultiply } from '@dinero.js/core';
-import type { MultiplyParams } from '@dinero.js/core';
+import { multiply as coreMultiply } from '@bitmachina/dinero-core';
+import type { MultiplyParams } from '@bitmachina/dinero-core';
 
 /**
  * Multiply the passed Dinero object.
@@ -8,6 +8,8 @@ import type { MultiplyParams } from '@dinero.js/core';
  * @param multiplier - The number to multiply with.
  *
  * @returns A new Dinero object.
+ *
+ * @public
  */
 export function multiply<TAmount>(
   ...[multiplicand, multiplier]: MultiplyParams<TAmount>

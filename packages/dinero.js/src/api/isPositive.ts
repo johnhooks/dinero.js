@@ -1,5 +1,5 @@
-import { isPositive as coreIsPositive } from '@dinero.js/core';
-import type { IsPositiveParams } from '@dinero.js/core';
+import { isPositive as coreIsPositive } from '@bitmachina/dinero-core';
+import type { IsPositiveParams } from '@bitmachina/dinero-core';
 
 /**
  * Check whether a Dinero object is positive.
@@ -7,6 +7,8 @@ import type { IsPositiveParams } from '@dinero.js/core';
  * @param dineroObject - The Dinero object to check.
  *
  * @returns Whether the Dinero object is positive.
+ *
+ * @public
  */
 export function isPositive<TAmount>(
   ...[dineroObject]: IsPositiveParams<TAmount>

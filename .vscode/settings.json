@@ -1,5 +1,6 @@
 {
   "path-intellisense.mappings": {
     "@dinero.js": "${workspaceRoot}/packages"
-  }
+  },
+  "eslint.workingDirectories": ["packages/*"]
 }

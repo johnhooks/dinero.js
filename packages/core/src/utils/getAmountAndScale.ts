@@ -2,6 +2,9 @@ import type { ScaledAmount } from '../types';
 
 import { isScaledAmount } from './isScaledAmount';
 
+/**
+ * @internal
+ */
 export function getAmountAndScale<TAmount>(
   value: ScaledAmount<TAmount> | TAmount,
   zero: TAmount

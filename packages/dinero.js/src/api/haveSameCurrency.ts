@@ -1,4 +1,4 @@
-import { haveSameCurrency as coreHaveSameCurrency } from '@dinero.js/core';
+import { haveSameCurrency as coreHaveSameCurrency } from '@bitmachina/dinero-core';
 
 /**
  * Check whether a set of Dinero objects have the same currency.
@@ -6,5 +6,7 @@ import { haveSameCurrency as coreHaveSameCurrency } from '@dinero.js/core';
  * @param dineroObjects - The Dinero objects to compare.
  *
  * @returns Whether the Dinero objects have the same currency.
+ *
+ * @public
  */
 export const haveSameCurrency = coreHaveSameCurrency;

@@ -11,6 +11,9 @@ export type SubtractParams<TAmount> = readonly [
   subtrahend: Dinero<TAmount>
 ];
 
+/**
+ * @internal
+ */
 function unsafeSubtract<TAmount>(calculator: Calculator<TAmount>) {
   return function subtract(...[minuend, subtrahend]: SubtractParams<TAmount>) {
     const { amount: minuendAmount, currency, scale } = minuend.toJSON();

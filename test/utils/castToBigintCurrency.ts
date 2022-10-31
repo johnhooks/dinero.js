@@ -1,11 +1,13 @@
-import type { Currency } from 'dinero.js';
+import type { Currency } from '@bitmachina/dinero.js';
 
 export function castToBigintCurrency(
   currency: Currency<number>
 ): Currency<bigint> {
   return {
     ...currency,
-    base: BigInt(currency.base),
+    base: Array.isArray(currency.base)
+      ? currency.base.map(BigInt)
+      : BigInt(currency.base as number),
     exponent: BigInt(currency.exponent),
   };
 }

@@ -11,6 +11,8 @@ type GreaterThanOrEqualCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The greaterThanOrEqual function.
+ *
+ * @internal
  */
 export function greaterThanOrEqual<TAmount>(
   calculator: GreaterThanOrEqualCalculator<TAmount>

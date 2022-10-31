@@ -1,5 +1,9 @@
 node_modules
 coverage
+lib
 dist
+temp
 .DS_Store
 .env
+.turbo
+tsdoc-metadata.json

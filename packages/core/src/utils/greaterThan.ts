@@ -9,6 +9,8 @@ type GreaterThanCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The greaterThan function.
+ *
+ * @internal
  */
 export function greaterThan<TAmount>(
   calculator: GreaterThanCalculator<TAmount>

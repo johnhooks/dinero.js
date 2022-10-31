@@ -1,5 +1,5 @@
-import { safeSubtract } from '@dinero.js/core';
-import type { SubtractParams } from '@dinero.js/core';
+import { safeSubtract } from '@bitmachina/dinero-core';
+import type { SubtractParams } from '@bitmachina/dinero-core';
 
 /**
  * Subtract the passed Dinero objects.
@@ -8,6 +8,8 @@ import type { SubtractParams } from '@dinero.js/core';
  * @param subtrahend - The Dinero object to subtract.
  *
  * @returns A new Dinero object.
+ *
+ * @public
  */
 export function subtract<TAmount>(
   ...[minuend, subtrahend]: SubtractParams<TAmount>

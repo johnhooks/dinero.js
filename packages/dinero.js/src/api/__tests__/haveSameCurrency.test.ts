@@ -1,14 +1,15 @@
-import { EUR, USD } from '@dinero.js/currencies';
-import Big from 'big.js';
-
-import { haveSameCurrency } from '..';
+import { EUR, USD } from '@bitmachina/dinero-currencies';
 import {
   castToBigintCurrency,
   castToBigjsCurrency,
   createNumberDinero,
   createBigintDinero,
   createBigjsDinero,
-} from '../../../../../test/utils';
+} from '@bitmachina/dinero-test';
+import { Big } from 'big.js';
+import { describe, it, expect } from 'vitest';
+
+import { haveSameCurrency } from '..';
 
 describe('haveSameCurrency', () => {
   describe('number', () => {
@@ -42,6 +43,25 @@ describe('haveSameCurrency', () => {
           base: 10,
           exponent: 2,
         },
+      });
+
+      expect(haveSameCurrency([d1, d2])).toBe(true);
+    });
+    it('returns true when multi-base currencies are structurally equal', () => {
+      const GBP = { code: 'GBP', base: [20, 12], exponent: 1 };
+      const d1 = dinero({ amount: 240, currency: GBP });
+      const d2 = dinero({ amount: 240, currency: GBP });
+
+      expect(haveSameCurrency([d1, d2])).toBe(true);
+    });
+    it('returns true when multi-base currencies compute to the same base', () => {
+      const d1 = dinero({
+        amount: 240,
+        currency: { code: 'GBP', base: [20, 12], exponent: 1 },
+      });
+      const d2 = dinero({
+        amount: 240,
+        currency: { code: 'GBP', base: 240, exponent: 1 },
       });
 
       expect(haveSameCurrency([d1, d2])).toBe(true);
@@ -84,6 +104,25 @@ describe('haveSameCurrency', () => {
 
       expect(haveSameCurrency([d1, d2])).toBe(true);
     });
+    it('returns true when multi-base currencies are structurally equal', () => {
+      const GBP = { code: 'GBP', base: [20n, 12n], exponent: 1n };
+      const d1 = dinero({ amount: 240n, currency: GBP });
+      const d2 = dinero({ amount: 240n, currency: GBP });
+
+      expect(haveSameCurrency([d1, d2])).toBe(true);
+    });
+    it('returns true when multi-base currencies compute to the same base', () => {
+      const d1 = dinero({
+        amount: 240n,
+        currency: { code: 'GBP', base: [20n, 12n], exponent: 1n },
+      });
+      const d2 = dinero({
+        amount: 240n,
+        currency: { code: 'GBP', base: 240n, exponent: 1n },
+      });
+
+      expect(haveSameCurrency([d1, d2])).toBe(true);
+    });
   });
   describe('Big.js', () => {
     const dinero = createBigjsDinero;
@@ -118,6 +157,33 @@ describe('haveSameCurrency', () => {
           base: new Big(10),
           exponent: new Big(2),
         },
+      });
+
+      expect(haveSameCurrency([d1, d2])).toBe(true);
+    });
+    it('returns true when multi-base currencies are structurally equal', () => {
+      const GBP = {
+        code: 'GBP',
+        base: [new Big(20), new Big(20)],
+        exponent: new Big(1),
+      };
+      const d1 = dinero({ amount: new Big(240), currency: GBP });
+      const d2 = dinero({ amount: new Big(240), currency: GBP });
+
+      expect(haveSameCurrency([d1, d2])).toBe(true);
+    });
+    it('returns true when multi-base currencies compute to the same base', () => {
+      const d1 = dinero({
+        amount: new Big(240),
+        currency: {
+          code: 'GBP',
+          base: [new Big(20), new Big(12)],
+          exponent: new Big(1),
+        },
+      });
+      const d2 = dinero({
+        amount: new Big(240),
+        currency: { code: 'GBP', base: new Big(240), exponent: new Big(1) },
       });
 
       expect(haveSameCurrency([d1, d2])).toBe(true);

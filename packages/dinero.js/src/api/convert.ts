@@ -1,5 +1,5 @@
-import { convert as coreConvert } from '@dinero.js/core';
-import type { ConvertParams } from '@dinero.js/core';
+import { convert as coreConvert } from '@bitmachina/dinero-core';
+import type { ConvertParams } from '@bitmachina/dinero-core';
 
 /**
  * Convert a Dinero object to another currency.
@@ -9,6 +9,8 @@ import type { ConvertParams } from '@dinero.js/core';
  * @param rates - The rates to convert with.
  *
  * @returns A converted Dinero object.
+ *
+ * @public
  */
 export function convert<TAmount>(
   ...[dineroObject, newCurrency, rates]: ConvertParams<TAmount>

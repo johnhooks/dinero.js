@@ -1,5 +1,5 @@
-import { isNegative as coreIsNegative } from '@dinero.js/core';
-import type { IsNegativeParams } from '@dinero.js/core';
+import { isNegative as coreIsNegative } from '@bitmachina/dinero-core';
+import type { IsNegativeParams } from '@bitmachina/dinero-core';
 
 /**
  * Check whether a Dinero object is negative.
@@ -7,6 +7,8 @@ import type { IsNegativeParams } from '@dinero.js/core';
  * @param dineroObject - The Dinero object to check.
  *
  * @returns Whether the Dinero object is negative.
+ *
+ * @public
  */
 export function isNegative<TAmount>(
   ...[dineroObject]: IsNegativeParams<TAmount>

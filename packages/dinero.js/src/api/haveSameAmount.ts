@@ -1,5 +1,5 @@
-import { haveSameAmount as coreHaveSameAmount } from '@dinero.js/core';
-import type { HaveSameAmountParams } from '@dinero.js/core';
+import { haveSameAmount as coreHaveSameAmount } from '@bitmachina/dinero-core';
+import type { HaveSameAmountParams } from '@bitmachina/dinero-core';
 
 /**
  * Check whether a set of Dinero objects have the same amount.
@@ -7,6 +7,8 @@ import type { HaveSameAmountParams } from '@dinero.js/core';
  * @param dineroObjects - The Dinero objects to compare.
  *
  * @returns Whether the Dinero objects have the same amount.
+ *
+ * @public
  */
 export function haveSameAmount<TAmount>(
   ...[dineroObjects]: HaveSameAmountParams<TAmount>
