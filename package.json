@@ -9,11 +9,9 @@
     "lint": "turbo run lint",
     "prepare": "husky install",
     "release": "shipjs prepare",
-    "start": "yarn run watch",
     "test:size": "bundlesize",
     "test:types": "tsc --noEmit",
     "test": "turbo run test",
-    "watch": "lerna run watch --parallel --no-private",
     "website:dev": "yarn --cwd website/ dev",
     "website:start": "yarn --cwd website/ start",
     "website:build": "yarn --cwd website/ build"

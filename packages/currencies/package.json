@@ -10,7 +10,7 @@
     "currency",
     "currencies"
   ],
-  "homepage": "https://johnhooks.github.io/dinerojs",
+  "homepage": "https://github.com/johnhooks/dinero.js",
   "bugs": "https://github.com/johnhooks/dinero.js/issues",
   "repository": {
     "type": "git",

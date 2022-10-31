@@ -1,4 +1,4 @@
-# @dinero.js/calculator-bigint
+# @bitmachina/dinero-calculator-bigint
 
 > Bigint calculator implementation for Dinero.js.
 
@@ -7,11 +7,15 @@
 ## 📦 Install
 
 ```sh
-npm install @dinero.js/calculator-bigint@alpha
+npm install @bitmachina/dinero-calculator-bigint@alpha
 
 # or
 
-yarn add @dinero.js/calculator-bigint@alpha
+yarn add @bitmachina/dinero-calculator-bigint@alpha
+
+# or
+
+pnpm add @bitmachina/dinero-calculator-bigint@alpha
 ```
 
 ## 📚 Documentation

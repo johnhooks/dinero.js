@@ -6,7 +6,7 @@ module.exports = {
     packagesToPublish: ['packages/*'],
   },
   publishCommand({ tag }) {
-    return `pnpm publish --access public --tag ${tag}`;
+    return `pnpm publish --access public --tag ${tag} --publish-branch develop`;
   },
   installCommand: () => 'pnpm install',
   // Skip preparation if it contains only `chore` commits
