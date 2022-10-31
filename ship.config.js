@@ -2,7 +2,13 @@
 module.exports = {
   monorepo: {
     mainVersionFile: 'package.json',
-    packagesToBump: [],
+    packagesToBump: [
+      'packages/calculator-bigint',
+      'packages/calculator-number',
+      'packages/core',
+      'packages/currencies',
+      'packages/dinero.js',
+    ],
     packagesToPublish: [
       'packages/calculator-bigint',
       'packages/calculator-number',
@@ -14,6 +20,7 @@ module.exports = {
   publishCommand({ tag }) {
     return `pnpm publish --access public --tag ${tag}`;
   },
+  installCommand: () => 'pnpm install',
   // versionUpdated({ exec, version }) {
   //   // Update package dependencies
   //   exec(
