@@ -1,6 +1,6 @@
 {
   "name": "@bitmachina/dinero-calculator-number",
-  "version": "2.0.0-alpha.8",
+  "version": "2.0.0-alpha.10",
   "description": "Number calculator implementation for Dinero.js",
   "keywords": [
     "money",
@@ -35,9 +35,7 @@
   "module": "dist/esm/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "scripts": {
     "build:clean": "rimraf ./{dist,temp}",
     "build:tsc": "tsc -b",
@@ -49,6 +47,6 @@
     "test": "vitest run --config ../../vitest.config.ts"
   },
   "dependencies": {
-    "@bitmachina/dinero-core": "workspace:*"
+    "@bitmachina/dinero-core": "2.0.0-alpha.10"
   }
 }

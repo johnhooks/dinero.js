@@ -35,9 +35,7 @@
   "module": "dist/esm/index.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "scripts": {
     "build:clean": "rimraf ./{dist,temp}",
     "build:tsc": "tsc -b",
@@ -49,10 +47,11 @@
     "test": "vitest run --config=../../vitest.config.ts"
   },
   "dependencies": {
-    "@bitmachina/dinero-calculator-number": "workspace:*",
-    "@bitmachina/dinero-core": "workspace:*"
+    "@bitmachina/dinero-calculator-number": "2.0.0-alpha.10",
+    "@bitmachina/dinero-core": "2.0.0-alpha.10"
   },
   "devDependencies": {
-    "@bitmachina/dinero-calculator-bigint": "workspace:*"
-  }
+    "@bitmachina/dinero-calculator-bigint": "2.0.0-alpha.10"
+  },
+  "version": "2.0.0-alpha.10"
 }
