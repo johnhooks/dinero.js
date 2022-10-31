@@ -1,15 +1,16 @@
-import { MGA, USD } from '@dinero.js/currencies';
-import Big from 'big.js';
-import type { Dinero } from 'dinero.js';
-
-import { toFormat } from '..';
+import type { Dinero } from '@bitmachina/dinero-core';
+import { MGA, USD } from '@bitmachina/dinero-currencies';
 import {
   castToBigintCurrency,
   castToBigjsCurrency,
   createNumberDinero,
   createBigintDinero,
   createBigjsDinero,
-} from '../../../../../test/utils';
+} from '@bitmachina/dinero-test';
+import { Big } from 'big.js';
+import { describe, it, expect } from 'vitest';
+
+import { toFormat } from '..';
 
 function toIntlFormat<TAmount>(d: Dinero<TAmount>) {
   return toFormat(d, ({ decimal, currency }) => {

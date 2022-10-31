@@ -3,6 +3,9 @@ import { isArray, getDivisors } from '../utils';
 
 export type ToUnitsParams<TAmount> = readonly [dineroObject: Dinero<TAmount>];
 
+/**
+ * @internal
+ */
 export function toUnits<TAmount>(calculator: Calculator<TAmount>) {
   const getDivisorsFn = getDivisors(calculator);
 

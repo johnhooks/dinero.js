@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "exclude": [
+    "**/__fixtures__/**/*",
+    "**/__mocks__/**/*",
+    "**/dist",
+    "**/lib",
+    "**/temp",
+    "**/node_modules",
+    "stories",
+    "examples",
+    "website"
+  ]
+}

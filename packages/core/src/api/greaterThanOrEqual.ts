@@ -30,6 +30,9 @@ function unsafeGreaterThanOrEqual<TAmount>(calculator: Calculator<TAmount>) {
   };
 }
 
+/**
+ * @internal
+ */
 export function safeGreaterThanOrEqual<TAmount>(
   calculator: Calculator<TAmount>
 ) {

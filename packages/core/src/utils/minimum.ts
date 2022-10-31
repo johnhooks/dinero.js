@@ -10,6 +10,8 @@ type MinimumCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The minimum function.
+ *
+ * @internal
  */
 export function minimum<TAmount>(calculator: MinimumCalculator<TAmount>) {
   const greaterThanFn = greaterThan(calculator);

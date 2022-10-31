@@ -1,4 +1,4 @@
-import type { BinaryOperation } from '@dinero.js/core';
+import type { BinaryOperation } from '@bitmachina/dinero-core';
 
 /**
  * Returns the remainder of two numbers.

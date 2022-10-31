@@ -1,4 +1,4 @@
-import type { Currency } from 'dinero.js';
+import type { Currency } from '@bitmachina/dinero.js';
 
 export function castToBigintCurrency(
   currency: Currency<number>

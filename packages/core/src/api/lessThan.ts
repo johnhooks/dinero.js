@@ -30,6 +30,9 @@ function unsafeLessThan<TAmount>(calculator: Calculator<TAmount>) {
   };
 }
 
+/**
+ * @internal
+ */
 export function safeLessThan<TAmount>(calculator: Calculator<TAmount>) {
   const normalizeFn = normalizeScale(calculator);
   const lessThanFn = unsafeLessThan(calculator);

@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.declaration",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": "src",
+    "composite": true,
+    "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo"
+  },
+  "references": [
+    { "path": "../core" },
+    { "path": "../calculator-number" },
+    { "path": "../calculator-bigint" }
+  ],
+  "include": ["src"]
+}

@@ -13,7 +13,21 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ESNEXT"
+    "target": "es2020",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "outDir": "lib",
+    "baseUrl": "./",
+    "paths": {
+      "@bitmachina/dinero-core": ["packages/core/src/index"],
+      "@bitmachina/dinero-currencies": ["packages/currencies/src/index"],
+      "@bitmachina/dinero-calculator-bigint": ["packages/calculator-bigint/src/index"],
+      "@bitmachina/dinero-calculator-number": ["packages/calculator-number/src/index"],
+      "@bitmachina/dinero.js": ["packages/dinero.js/src/index"],
+      "@bitmachina/dinero-test": ["test/utils/index.ts"]
+    }
   },
   "exclude": [
     "**/__fixtures__/**/*",

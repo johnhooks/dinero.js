@@ -1,5 +1,5 @@
-import { safeSubtract } from '@dinero.js/core';
-import type { SubtractParams } from '@dinero.js/core';
+import { safeSubtract } from '@bitmachina/dinero-core';
+import type { SubtractParams } from '@bitmachina/dinero-core';
 
 /**
  * Subtract the passed Dinero objects.

@@ -7,6 +7,9 @@ export type CreateDineroOptions<TAmount> = {
   readonly onCreate?: (options: DineroOptions<TAmount>) => void;
 };
 
+/**
+ * @internal
+ */
 export function createDinero<TAmount>({
   calculator,
   onCreate,

@@ -1,4 +1,4 @@
-import { haveSameCurrency as coreHaveSameCurrency } from '@dinero.js/core';
+import { haveSameCurrency as coreHaveSameCurrency } from '@bitmachina/dinero-core';
 
 /**
  * Check whether a set of Dinero objects have the same currency.

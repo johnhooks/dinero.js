@@ -9,6 +9,8 @@ type EqualCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The equal function.
+ *
+ * @internal
  */
 export function equal<TAmount>(calculator: EqualCalculator<TAmount>) {
   return (subject: TAmount, comparator: TAmount) => {

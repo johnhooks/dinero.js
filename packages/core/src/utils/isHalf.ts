@@ -2,6 +2,9 @@ import type { Calculator } from '../types';
 
 import { equal, absolute } from '.';
 
+/**
+ * @internal
+ */
 export function isHalf<TAmount>(calculator: Calculator<TAmount>) {
   const equalFn = equal(calculator);
   const absoluteFn = absolute(calculator);
