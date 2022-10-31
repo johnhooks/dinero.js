@@ -1,9 +1,7 @@
-import { compare } from '@bitmachina/dinero-calculator-number';
-import { describe, it, expect } from 'vitest';
+import { compare } from '@dinero.js/calculator-number';
 
 import { minimum } from '../minimum';
 
-// @ts-expect-error
 const minimumFn = minimum({ compare });
 
 describe('minimum', () => {

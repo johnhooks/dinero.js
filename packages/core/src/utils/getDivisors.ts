@@ -1,8 +1,5 @@
 import type { Calculator } from '../types';
 
-/**
- * @internal
- */
 export function getDivisors<TAmount>(calculator: Calculator<TAmount>) {
   const { multiply } = calculator;
 

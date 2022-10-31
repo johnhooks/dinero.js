@@ -8,9 +8,6 @@ export type EqualParams<TAmount> = readonly [
   comparator: Dinero<TAmount>
 ];
 
-/**
- * @internal
- */
 export function equal<TAmount>(calculator: Calculator<TAmount>) {
   return function _equal(...[dineroObject, comparator]: EqualParams<TAmount>) {
     return (

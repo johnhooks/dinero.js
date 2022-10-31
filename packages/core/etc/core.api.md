@@ -35,6 +35,7 @@ export type Calculator<TInput> = {
     readonly multiply: BinaryOperation<TInput>;
     readonly power: BinaryOperation<TInput>;
     readonly subtract: BinaryOperation<TInput>;
+    readonly toNumber: TransformOperation<TInput, number>;
     readonly zero: () => TInput;
 };
 
@@ -65,19 +66,17 @@ rates: Rates<TAmount>
 ];
 
 // @public (undocumented)
-export function createDinero<TAmount>({ calculator, onCreate, formatter, }: CreateDineroOptions<TAmount>): ({ amount, currency, scale, }: DineroOptions<TAmount>) => Dinero<TAmount>;
+export function createDinero<TAmount>({ calculator, onCreate, }: CreateDineroOptions<TAmount>): ({ amount, currency, scale, }: DineroOptions<TAmount>) => Dinero<TAmount>;
 
 // @public (undocumented)
 export type CreateDineroOptions<TAmount> = {
     readonly calculator: Calculator<TAmount>;
-    readonly formatter?: Formatter<TAmount>;
     readonly onCreate?: (options: DineroOptions<TAmount>) => void;
 };
 
 // @public (undocumented)
 export type Dinero<TAmount> = {
     readonly calculator: Calculator<TAmount>;
-    readonly formatter: Formatter<TAmount>;
     readonly create: (options: DineroOptions<TAmount>) => Dinero<TAmount>;
     readonly toJSON: () => DineroSnapshot<TAmount>;
 };
@@ -99,11 +98,8 @@ export type DineroSnapshot<TAmount> = {
     readonly scale: TAmount;
 };
 
-// @public (undocumented)
-export type DivideOperation = <TAmount>(amount: TAmount, factor: TAmount, calculator: Calculator<TAmount>) => TAmount;
-
-// @public (undocumented)
-export const down: DivideOperation;
+// @public
+export const down: RoundingMode;
 
 // @public (undocumented)
 export function equal<TAmount>(calculator: Calculator<TAmount>): (dineroObject: Dinero<TAmount>, comparator: Dinero<TAmount>) => boolean;
@@ -115,10 +111,7 @@ comparator: Dinero<TAmount>
 ];
 
 // @public (undocumented)
-export type Formatter<TAmount> = {
-    readonly toNumber: (value?: TAmount) => number;
-    readonly toString: (value?: TAmount) => string;
-};
+export type Formatter<TAmount> = (dineroObject: Dinero<TAmount>) => string;
 
 // @public (undocumented)
 export type GreaterThanOrEqualParams<TAmount> = readonly [
@@ -132,23 +125,23 @@ dineroObject: Dinero<TAmount>,
 comparator: Dinero<TAmount>
 ];
 
-// @public (undocumented)
-export const halfAwayFromZero: DivideOperation;
+// @public
+export const halfAwayFromZero: RoundingMode;
 
-// @public (undocumented)
-export const halfDown: DivideOperation;
+// @public
+export const halfDown: RoundingMode;
 
-// @public (undocumented)
-export const halfEven: DivideOperation;
+// @public
+export const halfEven: RoundingMode;
 
-// @public (undocumented)
-export const halfOdd: DivideOperation;
+// @public
+export const halfOdd: RoundingMode;
 
-// @public (undocumented)
-export const halfTowardsZero: DivideOperation;
+// @public
+export const halfTowardsZero: RoundingMode;
 
-// @public (undocumented)
-export const halfUp: DivideOperation;
+// @public
+export const halfUp: RoundingMode;
 
 // @public (undocumented)
 export function hasSubUnits<TAmount>(calculator: Calculator<TAmount>): (dineroObject: Dinero<TAmount>) => boolean;
@@ -246,6 +239,15 @@ export type Rate<TAmount> = ScaledAmount<TAmount> | TAmount;
 export type Rates<TAmount> = Record<string, Rate<TAmount>>;
 
 // @public (undocumented)
+export type RoundingMode = (value: number) => number;
+
+// @public (undocumented)
+export type RoundingOptions<TAmount> = {
+    readonly digits?: TAmount;
+    readonly round?: RoundingMode;
+};
+
+// @public (undocumented)
 export function safeAdd<TAmount>(calculator: Calculator<TAmount>): (augend: Dinero<TAmount>, addend: Dinero<TAmount>) => Dinero<TAmount>;
 
 // @public (undocumented)
@@ -288,42 +290,47 @@ subtrahend: Dinero<TAmount>
 ];
 
 // @public (undocumented)
-export function toFormat<TAmount, TOutput>(calculator: Calculator<TAmount>): (dineroObject: Dinero<TAmount>, transformer: Transformer_2<TAmount, TOutput>) => TOutput;
+export function toFormat<TAmount>(calculator: Calculator<TAmount>): (dineroObject: Dinero<TAmount>, transformer: Transformer_2<TAmount>) => string;
 
 // @public (undocumented)
-export type ToFormatParams<TAmount, TOutput> = readonly [
+export type ToFormatParams<TAmount> = readonly [
 dineroObject: Dinero<TAmount>,
-transformer: Transformer_2<TAmount, TOutput>
+transformer: Transformer_2<TAmount>
 ];
 
 // @public (undocumented)
 export function toSnapshot<TAmount>(dineroObject: Dinero<TAmount>): DineroSnapshot<TAmount>;
 
 // @public (undocumented)
-export function toUnits<TAmount>(calculator: Calculator<TAmount>): (dineroObject: Dinero<TAmount>) => readonly TAmount[];
+export function toUnit<TAmount>(calculator: Calculator<TAmount>): (dineroObject: Dinero<TAmount>, options?: RoundingOptions<TAmount> | undefined) => number;
 
 // @public (undocumented)
-export type ToUnitsParams<TAmount> = readonly [dineroObject: Dinero<TAmount>];
+export type ToUnitParams<TAmount> = readonly [
+dineroObject: Dinero<TAmount>,
+options?: RoundingOptions<TAmount>
+];
 
 // @public (undocumented)
-type Transformer_2<TAmount, TOutput> = (options: TransformerOptions<TAmount>) => TOutput;
+type Transformer_2<TAmount> = (options: TransformerOptions<TAmount>) => string;
 export { Transformer_2 as Transformer }
 
 // @public (undocumented)
 export type TransformerOptions<TAmount> = {
-    readonly units: readonly TAmount[];
-    readonly decimal?: string;
+    readonly amount: number;
     readonly currency: Currency<TAmount>;
+    readonly dineroObject: Dinero<TAmount>;
 };
 
 // @public (undocumented)
-export function transformScale<TAmount>(calculator: Calculator<TAmount>): (dineroObject: Dinero<TAmount>, newScale: TAmount, divide?: DivideOperation | undefined) => Dinero<TAmount>;
+export type TransformOperation<TInput, TOutput = TInput> = (input: TInput) => TOutput;
+
+// @public (undocumented)
+export function transformScale<TAmount>(calculator: Calculator<TAmount>): (dineroObject: Dinero<TAmount>, newScale: TAmount) => Dinero<TAmount>;
 
 // @public (undocumented)
 export type TransformScaleParams<TAmount> = readonly [
 dineroObject: Dinero<TAmount>,
-newScale: TAmount,
-divide?: DivideOperation
+newScale: TAmount
 ];
 
 // @public (undocumented)
@@ -341,8 +348,8 @@ export const UNEQUAL_CURRENCIES_MESSAGE = "Objects must have the same currency."
 // @public (undocumented)
 export const UNEQUAL_SCALES_MESSAGE = "Objects must have the same scale.";
 
-// @public (undocumented)
-export const up: DivideOperation;
+// @public
+export const up: RoundingMode;
 
 // (No @packageDocumentation comment for this package)
 

@@ -8,9 +8,6 @@ export type MultiplyParams<TAmount> = readonly [
   multiplier: ScaledAmount<TAmount> | TAmount
 ];
 
-/**
- * @internal
- */
 export function multiply<TAmount>(calculator: Calculator<TAmount>) {
   const convertScaleFn = transformScale(calculator);
   const zero = calculator.zero();

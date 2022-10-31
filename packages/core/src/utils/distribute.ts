@@ -15,8 +15,6 @@ type DistributeCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The distribute function.
- *
- * @internal
  */
 export function distribute<TAmount>(calculator: DistributeCalculator<TAmount>) {
   return (value: TAmount, ratios: readonly TAmount[]) => {

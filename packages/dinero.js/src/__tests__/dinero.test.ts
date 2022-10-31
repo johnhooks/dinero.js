@@ -1,5 +1,4 @@
-import { USD } from '@bitmachina/dinero-currencies';
-import { describe, it, expect } from 'vitest';
+import { USD } from '@dinero.js/currencies';
 
 import { toSnapshot, dinero } from '..';
 

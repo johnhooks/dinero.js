@@ -1,5 +1,5 @@
-import { safeGreaterThanOrEqual } from '@bitmachina/dinero-core';
-import type { GreaterThanOrEqualParams } from '@bitmachina/dinero-core';
+import { safeGreaterThanOrEqual } from '@dinero.js/core';
+import type { GreaterThanOrEqualParams } from '@dinero.js/core';
 
 /**
  * Check whether the value of a Dinero object is greater than or equal another.

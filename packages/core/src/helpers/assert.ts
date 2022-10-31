@@ -1,4 +1,4 @@
-/* eslint-disable functional/no-throw-statement */
+/* eslint-disable functional/no-throw-statement, valid-jsdoc */
 /**
  * Assert a condition.
  *
@@ -6,8 +6,6 @@
  * @param message - The error message to throw.
  *
  * @throws If the condition isn't met.
- *
- * @internal
  */
 export function assert(condition: boolean, message: string) {
   if (!condition) {

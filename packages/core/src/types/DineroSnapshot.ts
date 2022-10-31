@@ -1,4 +1,4 @@
-import type { Currency } from './Currency';
+import type { Currency } from '@dinero.js/currencies';
 
 export type DineroSnapshot<TAmount> = {
   readonly amount: TAmount;

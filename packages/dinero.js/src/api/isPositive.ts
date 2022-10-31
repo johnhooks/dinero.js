@@ -1,5 +1,5 @@
-import { isPositive as coreIsPositive } from '@bitmachina/dinero-core';
-import type { IsPositiveParams } from '@bitmachina/dinero-core';
+import { isPositive as coreIsPositive } from '@dinero.js/core';
+import type { IsPositiveParams } from '@dinero.js/core';
 
 /**
  * Check whether a Dinero object is positive.

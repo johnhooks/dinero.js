@@ -7,9 +7,6 @@ export type NormalizeScaleParams<TAmount> = readonly [
   dineroObjects: ReadonlyArray<Dinero<TAmount>>
 ];
 
-/**
- * @internal
- */
 export function normalizeScale<TAmount>(calculator: Calculator<TAmount>) {
   const maximumFn = maximum(calculator);
   const convertScaleFn = transformScale(calculator);

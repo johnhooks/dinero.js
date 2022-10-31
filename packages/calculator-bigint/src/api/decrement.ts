@@ -1,4 +1,4 @@
-import type { UnaryOperation } from '@bitmachina/dinero-core';
+import type { UnaryOperation } from '@dinero.js/core';
 
 /**
  * Returns an decremented bigint.

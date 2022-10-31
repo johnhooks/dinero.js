@@ -8,9 +8,6 @@ export type ToFormatParams<TAmount, TOutput> = readonly [
   transformer: Transformer<TAmount, TOutput>
 ];
 
-/**
- * @internal
- */
 export function toFormat<TAmount, TOutput>(calculator: Calculator<TAmount>) {
   const toUnitsFn = toUnits(calculator);
   const computeBaseFn = computeBase(calculator);

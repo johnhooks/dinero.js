@@ -1,4 +1,4 @@
-import type { BinaryOperation } from '@bitmachina/dinero-core';
+import type { BinaryOperation } from '@dinero.js/core';
 
 /**
  * Returns an number to the power of an exponent.

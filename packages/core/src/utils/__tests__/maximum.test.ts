@@ -1,9 +1,7 @@
-import { compare } from '@bitmachina/dinero-calculator-number';
-import { describe, it, expect } from 'vitest';
+import { compare } from '@dinero.js/calculator-number';
 
 import { maximum } from '../maximum';
 
-// @ts-expect-error
 const maximumFn = maximum({ compare });
 
 describe('maximum', () => {

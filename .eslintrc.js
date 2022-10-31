@@ -1,9 +1,9 @@
 /* eslint-disable import/no-commonjs, functional/immutable-data, functional/no-expression-statement */
 module.exports = {
-  // ignorePatterns: ['**/lib/*', '**/dist/*'],
   plugins: ['functional', 'sonarjs', 'promise', 'import'],
   extends: [
     'algolia',
+    'algolia/jest',
     'algolia/typescript',
     'plugin:functional/recommended',
     'plugin:sonarjs/recommended',
@@ -13,7 +13,13 @@ module.exports = {
     'functional/no-conditional-statement': ['off'],
     'functional/functional-parameters': ['off'],
     '@typescript-eslint/explicit-function-return-type': ['off'],
-    'valid-jsdoc': 0,
+    'valid-jsdoc': [
+      'error',
+      {
+        requireReturnType: false,
+        requireParamType: false,
+      },
+    ],
     'jsdoc/check-param-names': ['off'],
     'import/extensions': ['off'],
     'import/order': [
@@ -66,9 +72,6 @@ module.exports = {
       typescript: {
         alwaysTryTypes: true,
       },
-    },
-    jsdoc: {
-      ignoreInternal: true,
     },
   },
 };

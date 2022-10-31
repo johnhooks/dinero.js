@@ -1,4 +1,4 @@
-import type { BinaryOperation } from '@bitmachina/dinero-core';
+import type { BinaryOperation } from '@dinero.js/core';
 
 /**
  * Returns the quotient of two numbers with no fractional part.

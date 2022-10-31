@@ -1,6 +1,5 @@
-import { Big } from 'big.js';
-
-import type { Currency } from '@bitmachina/dinero.js';
+import Big from 'big.js';
+import type { Currency } from 'dinero.js';
 
 export function castToBigjsCurrency(currency: Currency<number>): Currency<Big> {
   return {

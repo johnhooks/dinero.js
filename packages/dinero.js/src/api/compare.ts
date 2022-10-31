@@ -1,5 +1,5 @@
-import { safeCompare } from '@bitmachina/dinero-core';
-import type { CompareParams } from '@bitmachina/dinero-core';
+import { safeCompare } from '@dinero.js/core';
+import type { CompareParams } from '@dinero.js/core';
 
 /**
  * Compare the value of a Dinero object relative to another.

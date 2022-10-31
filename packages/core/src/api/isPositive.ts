@@ -5,9 +5,6 @@ export type IsPositiveParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>
 ];
 
-/**
- * @internal
- */
 export function isPositive<TAmount>(calculator: Calculator<TAmount>) {
   const greaterThanOrEqualFn = greaterThanOrEqual(calculator);
 

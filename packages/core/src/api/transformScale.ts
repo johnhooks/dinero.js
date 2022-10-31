@@ -8,9 +8,6 @@ export type TransformScaleParams<TAmount> = readonly [
   divide?: DivideOperation
 ];
 
-/**
- * @internal
- */
 export function transformScale<TAmount>(calculator: Calculator<TAmount>) {
   const greaterThanFn = greaterThan(calculator);
   const computeBaseFn = computeBase(calculator);

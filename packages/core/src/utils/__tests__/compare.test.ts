@@ -1,5 +1,4 @@
-import { compare as cmp } from '@bitmachina/dinero-calculator-number';
-import { describe, it, expect } from 'vitest';
+import { compare as cmp } from '@dinero.js/calculator-number';
 
 import { compare } from '../compare';
 

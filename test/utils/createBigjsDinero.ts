@@ -1,7 +1,6 @@
-import { Big } from 'big.js';
-
-import { createDinero } from '@bitmachina/dinero.js';
-import type { DineroOptions, ComparisonOperator } from '@bitmachina/dinero.js';
+import Big from 'big.js';
+import { createDinero } from 'dinero.js';
+import type { DineroOptions, ComparisonOperator } from 'dinero.js';
 
 const dinero = createDinero({
   calculator: {

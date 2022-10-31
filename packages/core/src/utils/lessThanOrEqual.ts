@@ -11,8 +11,6 @@ type LessThanOrEqualCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The lessThanOrEqual function.
- *
- * @internal
  */
 export function lessThanOrEqual<TAmount>(
   calculator: LessThanOrEqualCalculator<TAmount>

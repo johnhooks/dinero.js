@@ -1,5 +1,4 @@
-import { ComparisonOperator } from '@bitmachina/dinero-core';
-import { describe, it, expect } from 'vitest';
+import { ComparisonOperator } from '@dinero.js/core';
 
 import { compare } from '../compare';
 

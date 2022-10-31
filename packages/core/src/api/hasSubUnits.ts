@@ -5,9 +5,6 @@ export type HasSubUnitsParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>
 ];
 
-/**
- * @internal
- */
 export function hasSubUnits<TAmount>(calculator: Calculator<TAmount>) {
   const equalFn = equal(calculator);
   const computeBaseFn = computeBase(calculator);

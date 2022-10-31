@@ -44,9 +44,6 @@ export type AllocateParams<TAmount> = readonly [
   ratios: ReadonlyArray<ScaledAmount<TAmount> | TAmount>
 ];
 
-/**
- * @internal
- */
 export function safeAllocate<TAmount>(calculator: Calculator<TAmount>) {
   const allocateFn = unsafeAllocate(calculator);
   const greaterThanOrEqualFn = greaterThanOrEqual(calculator);

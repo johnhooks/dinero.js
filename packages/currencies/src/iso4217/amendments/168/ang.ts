@@ -1,4 +1,4 @@
-import type { Currency } from '@bitmachina/dinero-core';
+import type { Currency } from '../../../types';
 
 /**
  * Netherlands Antillean guilder.

@@ -34,9 +34,6 @@ function unsafeMinimum<TAmount>(calculator: Calculator<TAmount>) {
   };
 }
 
-/**
- * @internal
- */
 export function safeMinimum<TAmount>(calculator: Calculator<TAmount>) {
   const normalizeFn = normalizeScale(calculator);
   const minFn = unsafeMinimum(calculator);

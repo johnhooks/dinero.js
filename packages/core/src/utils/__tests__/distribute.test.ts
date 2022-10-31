@@ -8,8 +8,7 @@ import {
   multiply,
   subtract,
   zero,
-} from '@bitmachina/dinero-calculator-number';
-import { describe, it, expect } from 'vitest';
+} from '@dinero.js/calculator-number';
 
 import { distribute } from '../distribute';
 

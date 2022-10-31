@@ -5,9 +5,6 @@ import { transformScale } from './transformScale';
 
 export type TrimScaleParams<TAmount> = readonly [dineroObject: Dinero<TAmount>];
 
-/**
- * @internal
- */
 export function trimScale<TAmount>(calculator: Calculator<TAmount>) {
   const countTrailingZerosFn = countTrailingZeros(calculator);
   const equalFn = equal(calculator);

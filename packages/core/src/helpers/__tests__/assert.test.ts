@@ -1,5 +1,3 @@
-import { describe, it, expect } from 'vitest';
-
 import { assert } from '../assert';
 
 const errorMessage = 'Some error message.';

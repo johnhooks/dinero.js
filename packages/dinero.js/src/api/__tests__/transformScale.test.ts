@@ -1,15 +1,14 @@
-import { USD, MGA } from '@bitmachina/dinero-currencies';
+import { USD, MGA } from '@dinero.js/currencies';
+import Big from 'big.js';
+
+import { toSnapshot, transformScale } from '..';
 import {
   castToBigintCurrency,
   castToBigjsCurrency,
   createNumberDinero,
   createBigintDinero,
   createBigjsDinero,
-} from '@bitmachina/dinero-test';
-import { Big } from 'big.js';
-import { describe, it, expect, vi } from 'vitest';
-
-import { toSnapshot, transformScale } from '..';
+} from '../../../../../test/utils';
 
 describe('transformScale', () => {
   describe('number', () => {
@@ -41,7 +40,7 @@ describe('transformScale', () => {
         expect(snapshot).toMatchObject({ amount: 333, scale: 2 });
       });
       it('uses a custom divide function', () => {
-        const divideFn = vi.fn(() => 1045);
+        const divideFn = jest.fn(() => 1045);
         const d = dinero({ amount: 10455, currency: USD, scale: 3 });
 
         const snapshot = toSnapshot(transformScale(d, 2, divideFn));

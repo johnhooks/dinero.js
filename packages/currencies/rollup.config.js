@@ -1,6 +1,5 @@
-/* eslint-disable functional/no-expression-statement, functional/immutable-data, import/no-commonjs, @typescript-eslint/no-var-requires */
-const { createRollupConfigs } = require('../../scripts/rollup/config.js');
+import { createRollupConfigs } from '../../scripts/rollup/config';
 
-const pkg = require('./package.json');
+import pkg from './package.json';
 
-module.exports = createRollupConfigs({ pkg });
+export default createRollupConfigs({ pkg, inputs: ['index', 'latest', '168'] });

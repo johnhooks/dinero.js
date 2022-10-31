@@ -30,9 +30,6 @@ function unsafeGreaterThan<TAmount>(calculator: Calculator<TAmount>) {
   };
 }
 
-/**
- * @internal
- */
 export function safeGreaterThan<TAmount>(calculator: Calculator<TAmount>) {
   const normalizeFn = normalizeScale(calculator);
   const greaterThanFn = unsafeGreaterThan(calculator);

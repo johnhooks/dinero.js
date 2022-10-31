@@ -1,15 +1,14 @@
-import { EUR, USD } from '@bitmachina/dinero-currencies';
+import { EUR, USD } from '@dinero.js/currencies';
+import Big from 'big.js';
+
+import { greaterThanOrEqual } from '..';
 import {
   castToBigintCurrency,
   castToBigjsCurrency,
   createNumberDinero,
   createBigintDinero,
   createBigjsDinero,
-} from '@bitmachina/dinero-test';
-import { Big } from 'big.js';
-import { describe, it, expect } from 'vitest';
-
-import { greaterThanOrEqual } from '..';
+} from '../../../../../test/utils';
 
 describe('greaterThanOrEqual', () => {
   describe('number', () => {

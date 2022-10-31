@@ -1,5 +1,4 @@
-import { compare } from '@bitmachina/dinero-calculator-number';
-import { describe, it, expect } from 'vitest';
+import { compare } from '@dinero.js/calculator-number';
 
 import { greaterThanOrEqual } from '../greaterThanOrEqual';
 

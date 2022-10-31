@@ -1,4 +1,4 @@
-import type { Currency } from '@bitmachina/dinero-core';
+import type { Currency } from '../../../types';
 
 /**
  * Sierra Leonean leone.

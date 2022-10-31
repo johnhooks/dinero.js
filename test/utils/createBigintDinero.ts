@@ -1,6 +1,6 @@
-import { calculator } from '@bitmachina/dinero-calculator-bigint';
-import { createDinero } from '@bitmachina/dinero.js';
-import type { DineroOptions } from '@bitmachina/dinero.js';
+import { calculator } from '@dinero.js/calculator-bigint';
+import { createDinero } from 'dinero.js';
+import type { DineroOptions } from 'dinero.js';
 
 const dinero = createDinero({ calculator });
 
