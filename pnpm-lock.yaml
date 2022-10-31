@@ -86,13 +86,13 @@ importers:
 
   packages/calculator-bigint:
     specifiers:
-      '@bitmachina/dinero-core': workspace:*
+      '@bitmachina/dinero-core': 2.0.0-alpha.9
     dependencies:
       '@bitmachina/dinero-core': link:../core
 
   packages/calculator-number:
     specifiers:
-      '@bitmachina/dinero-core': workspace:*
+      '@bitmachina/dinero-core': 2.0.0-alpha.9
     dependencies:
       '@bitmachina/dinero-core': link:../core
 
@@ -101,15 +101,15 @@ importers:
 
   packages/currencies:
     specifiers:
-      '@bitmachina/dinero-core': workspace:*
+      '@bitmachina/dinero-core': 2.0.0-alpha.9
     devDependencies:
       '@bitmachina/dinero-core': link:../core
 
   packages/dinero.js:
     specifiers:
-      '@bitmachina/dinero-calculator-bigint': workspace:*
-      '@bitmachina/dinero-calculator-number': workspace:*
-      '@bitmachina/dinero-core': workspace:*
+      '@bitmachina/dinero-calculator-bigint': 2.0.0-alpha.9
+      '@bitmachina/dinero-calculator-number': 2.0.0-alpha.9
+      '@bitmachina/dinero-core': 2.0.0-alpha.9
     dependencies:
       '@bitmachina/dinero-calculator-number': link:../calculator-number
       '@bitmachina/dinero-core': link:../core
