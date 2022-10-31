@@ -10,6 +10,8 @@ type MaximumCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The maximum function.
+ *
+ * @internal
  */
 export function maximum<TAmount>(calculator: MaximumCalculator<TAmount>) {
   const lessThanFn = lessThan(calculator);

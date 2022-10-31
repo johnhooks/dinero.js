@@ -1,11 +1,11 @@
 /* eslint-disable functional/no-expression-statement */
-import { calculator } from '@dinero.js/calculator-number';
+import { calculator } from '@bitmachina/dinero-calculator-number';
 import {
   createDinero,
   assert,
   INVALID_AMOUNT_MESSAGE,
   INVALID_SCALE_MESSAGE,
-} from '@dinero.js/core';
+} from '@bitmachina/dinero-core';
 
 /**
  * Create a Dinero object.

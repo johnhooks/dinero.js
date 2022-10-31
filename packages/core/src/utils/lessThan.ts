@@ -9,6 +9,8 @@ type LessThanCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The lessThan function.
+ *
+ * @internal
  */
 export function lessThan<TAmount>(calculator: LessThanCalculator<TAmount>) {
   return (subject: TAmount, comparator: TAmount) => {

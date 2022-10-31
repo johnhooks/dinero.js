@@ -2,6 +2,9 @@ import type { Calculator } from '../types';
 
 import { equal } from '.';
 
+/**
+ * @internal
+ */
 export function isEven<TAmount>(calculator: Calculator<TAmount>) {
   const equalFn = equal(calculator);
   const zero = calculator.zero();

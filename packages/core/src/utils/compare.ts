@@ -8,6 +8,8 @@ type ComparisonCalculator<TAmount> = Calculator<TAmount>;
  * @param calculator - The calculator to use.
  *
  * @returns The compare function.
+ *
+ * @internal
  */
 export function compare<TAmount>(calculator: ComparisonCalculator<TAmount>) {
   return (subject: TAmount, comparator: TAmount) => {

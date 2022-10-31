@@ -1,4 +1,4 @@
-import type { UnaryOperation } from '@dinero.js/core';
+import type { UnaryOperation } from '@bitmachina/dinero-core';
 
 /**
  * Returns an incremented number.

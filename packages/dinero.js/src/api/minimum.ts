@@ -1,5 +1,5 @@
-import { safeMinimum } from '@dinero.js/core';
-import type { MinimumParams } from '@dinero.js/core';
+import { safeMinimum } from '@bitmachina/dinero-core';
+import type { MinimumParams } from '@bitmachina/dinero-core';
 
 /**
  * Get the lowest of the passed Dinero objects.

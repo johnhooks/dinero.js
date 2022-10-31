@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import { modulo } from '../modulo';
 
 describe('modulo', () => {

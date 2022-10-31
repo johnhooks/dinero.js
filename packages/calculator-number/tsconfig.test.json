@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.test",
+  "references": [{ "path": "../core" }],
+  "include": ["src"]
+}

@@ -1,4 +1,5 @@
-import { calculator } from '@dinero.js/calculator-number';
+import { calculator } from '@bitmachina/dinero-calculator-number';
+import { describe, it, expect } from 'vitest';
 
 import { absolute } from '../absolute';
 

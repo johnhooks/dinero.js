@@ -1,8 +1,8 @@
 /* eslint-disable import/no-commonjs, functional/immutable-data, functional/no-expression-statement */
 module.exports = {
-  '**/*.ts': () => 'yarn test:types',
+  // '**/*.ts': () => 'turbo test:types',
   '**/*.(ts|js)': (filenames) => [
-    `yarn lint --fix ${filenames.join(' ')}`,
-    `yarn format ${filenames.join(' ')}`,
+    `eslint --ext .js,.ts --fix ${filenames.join(' ')}`,
+    `prettier --write ${filenames.join(' ')}`,
   ],
 };

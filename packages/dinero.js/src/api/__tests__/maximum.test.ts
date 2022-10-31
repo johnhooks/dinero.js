@@ -1,14 +1,15 @@
-import { EUR, USD } from '@dinero.js/currencies';
-import Big from 'big.js';
-
-import { maximum, toSnapshot } from '..';
+import { EUR, USD } from '@bitmachina/dinero-currencies';
 import {
   castToBigintCurrency,
   castToBigjsCurrency,
   createNumberDinero,
   createBigintDinero,
   createBigjsDinero,
-} from '../../../../../test/utils';
+} from '@bitmachina/dinero-test';
+import { Big } from 'big.js';
+import { describe, it, expect } from 'vitest';
+
+import { maximum, toSnapshot } from '..';
 
 describe('maximum', () => {
   describe('number', () => {

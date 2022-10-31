@@ -30,6 +30,9 @@ function unsafeCompare<TAmount>(calculator: Calculator<TAmount>) {
   };
 }
 
+/**
+ * @internal
+ */
 export function safeCompare<TAmount>(calculator: Calculator<TAmount>) {
   const normalizeFn = normalizeScale(calculator);
   const compareFn = unsafeCompare(calculator);

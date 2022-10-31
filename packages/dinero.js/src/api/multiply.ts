@@ -1,5 +1,5 @@
-import { multiply as coreMultiply } from '@dinero.js/core';
-import type { MultiplyParams } from '@dinero.js/core';
+import { multiply as coreMultiply } from '@bitmachina/dinero-core';
+import type { MultiplyParams } from '@bitmachina/dinero-core';
 
 /**
  * Multiply the passed Dinero object.

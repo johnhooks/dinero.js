@@ -30,6 +30,9 @@ function unsafeLessThanOrEqual<TAmount>(calculator: Calculator<TAmount>) {
   };
 }
 
+/**
+ * @internal
+ */
 export function safeLessThanOrEqual<TAmount>(calculator: Calculator<TAmount>) {
   const normalizeFn = normalizeScale(calculator);
   const lessThanOrEqualFn = unsafeLessThanOrEqual(calculator);

@@ -2,6 +2,9 @@ import type { Calculator } from '../types';
 
 import { isArray } from './isArray';
 
+/**
+ * @internal
+ */
 export function computeBase<TAmount>(calculator: Calculator<TAmount>) {
   return (base: TAmount | readonly TAmount[]) => {
     if (isArray(base)) {

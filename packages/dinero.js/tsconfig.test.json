@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.test",
+  "references": [
+    { "path": "../core" },
+    { "path": "../calculator-number" },
+    { "path": "../../test" }
+  ],
+  "include": ["src"]
+}

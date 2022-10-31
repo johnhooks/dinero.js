@@ -5,6 +5,9 @@ import { equal } from './equal';
 
 type CountTrailingZerosCalculator<TAmount> = Calculator<TAmount>;
 
+/**
+ * @internal
+ */
 export function countTrailingZeros<TAmount>(
   calculator: CountTrailingZerosCalculator<TAmount>
 ) {

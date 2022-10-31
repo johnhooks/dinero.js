@@ -34,6 +34,9 @@ function unsafeMaximum<TAmount>(calculator: Calculator<TAmount>) {
   };
 }
 
+/**
+ * @internal
+ */
 export function safeMaximum<TAmount>(calculator: Calculator<TAmount>) {
   const normalizeFn = normalizeScale(calculator);
   const maxFn = unsafeMaximum(calculator);

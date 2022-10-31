@@ -5,6 +5,9 @@ export type IsNegativeParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>
 ];
 
+/**
+ * @internal
+ */
 export function isNegative<TAmount>(calculator: Calculator<TAmount>) {
   const lessThanFn = lessThan(calculator);
 

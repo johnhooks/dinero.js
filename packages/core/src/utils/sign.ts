@@ -3,6 +3,9 @@ import type { Calculator } from '../types';
 import { equal } from './equal';
 import { lessThan } from './lessThan';
 
+/**
+ * @internal
+ */
 export function sign<TAmount>(calculator: Calculator<TAmount>) {
   const equalFn = equal(calculator);
   const lessThanFn = lessThan(calculator);

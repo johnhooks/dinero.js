@@ -1,5 +1,5 @@
-import { safeMaximum } from '@dinero.js/core';
-import type { MaximumParams } from '@dinero.js/core';
+import { safeMaximum } from '@bitmachina/dinero-core';
+import type { MaximumParams } from '@bitmachina/dinero-core';
 
 /**
  * Get the greatest of the passed Dinero objects.

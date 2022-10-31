@@ -1,14 +1,15 @@
-import { USD, MGA } from '@dinero.js/currencies';
-import Big from 'big.js';
-
-import { allocate, toSnapshot } from '..';
+import { USD, MGA } from '@bitmachina/dinero-currencies';
 import {
   castToBigintCurrency,
   castToBigjsCurrency,
   createNumberDinero,
   createBigintDinero,
   createBigjsDinero,
-} from '../../../../../test/utils';
+} from '@bitmachina/dinero-test';
+import { Big } from 'big.js';
+import { describe, it, expect } from 'vitest';
+
+import { allocate, toSnapshot } from '..';
 
 describe('allocate', () => {
   describe('number', () => {
