@@ -1,6 +1,6 @@
 {
   "name": "@pesos/currencies",
-  "version": "2.0.0-alpha.8",
+  "version": "2.0.0-alpha.9",
   "description": "Common currency implementations for Dinero.js",
   "keywords": [
     "money",
@@ -54,6 +54,6 @@
     "watch": "watch \"yarn on:change\" --ignoreDirectoryPattern \"/dist/\""
   },
   "dependencies": {
-    "@pesos/core": "2.0.0-alpha.8"
+    "@pesos/core": "2.0.0-alpha.9"
   }
 }
