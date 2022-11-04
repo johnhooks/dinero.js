@@ -1,4 +1,4 @@
-import { EUR, USD, MGA } from '@dinero.js/currencies';
+import { EUR, USD, MGA } from '@pesos/currencies';
 import Big from 'big.js';
 
 import { compare } from '..';

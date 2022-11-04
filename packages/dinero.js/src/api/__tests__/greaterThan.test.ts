@@ -1,4 +1,4 @@
-import { EUR, MGA, USD } from '@dinero.js/currencies';
+import { EUR, MGA, USD } from '@pesos/currencies';
 import Big from 'big.js';
 
 import { greaterThan } from '..';

@@ -1,5 +1,5 @@
-import { toFormat as coreToFormat } from '@dinero.js/core';
-import type { ToFormatParams } from '@dinero.js/core';
+import { toFormat as coreToFormat } from '@pesos/core';
+import type { ToFormatParams } from '@pesos/core';
 
 /**
  * Format a Dinero object with a custom transformer.

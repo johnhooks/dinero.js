@@ -1,5 +1,5 @@
 {
-  "name": "@dinero.js/monorepo",
+  "name": "@pesos/monorepo",
   "private": true,
   "license": "MIT",
   "workspaces": {

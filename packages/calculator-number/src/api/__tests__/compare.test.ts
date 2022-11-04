@@ -1,4 +1,4 @@
-import { ComparisonOperator } from '@dinero.js/core';
+import { ComparisonOperator } from '@pesos/core';
 
 import { compare } from '../compare';
 

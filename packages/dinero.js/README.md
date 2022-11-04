@@ -1,4 +1,4 @@
-# dinero.js
+# @pesos/dinero.js
 
 > Create, calculate, and format money in JavaScript and TypeScript
 
@@ -7,20 +7,20 @@
 ## 📦 Install
 
 ```sh
-npm install dinero.js@alpha
+npm install @pesos/dinero.js@alpha
 
 # or
 
-yarn add dinero.js@alpha
+yarn add @pesos/dinero.js@alpha
 ```
 
 ## ⚡️ Quick start
 
-`Dinero` objects are minimal. Every function in `dinero.js` is side-effect free, allowing you only to bundle exactly what you use.
+`Dinero` objects are minimal. Every function in `@pesos/dinero.js` is side-effect free, allowing you only to bundle exactly what you use.
 
 ```js
-import { USD } from '@dinero.js/currencies';
-import { dinero, add } from 'dinero.js';
+import { USD } from '@pesos/core';
+import { dinero, add } from '@pesos/dinero.js';
 
 const d1 = dinero({ amount: 500, currency: USD });
 const d2 = dinero({ amount: 800, currency: USD });

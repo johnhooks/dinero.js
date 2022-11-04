@@ -1,4 +1,4 @@
-import { USD } from '@dinero.js/currencies';
+import { USD } from '@pesos/currencies';
 
 import { toSnapshot, dinero } from '..';
 

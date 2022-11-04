@@ -1,4 +1,4 @@
-# @dinero.js/calculator-number
+# @pesos/calculator-number
 
 > Number calculator implementation for Dinero.js.
 
@@ -7,11 +7,11 @@
 ## 📦 Install
 
 ```sh
-npm install @dinero.js/calculator-number@alpha
+npm install @pesos/calculator-number@alpha
 
 # or
 
-yarn add @dinero.js/calculator-number@alpha
+yarn add @pesos/calculator-number@alpha
 ```
 
 ## 📚 Documentation

@@ -1,5 +1,5 @@
-import { isNegative as coreIsNegative } from '@dinero.js/core';
-import type { IsNegativeParams } from '@dinero.js/core';
+import { isNegative as coreIsNegative } from '@pesos/core';
+import type { IsNegativeParams } from '@pesos/core';
 
 /**
  * Check whether a Dinero object is negative.

@@ -1,11 +1,11 @@
 /* eslint-disable functional/no-expression-statement */
-import { calculator } from '@dinero.js/calculator-number';
+import { calculator } from '@pesos/calculator-number';
 import {
   createDinero,
   assert,
   INVALID_AMOUNT_MESSAGE,
   INVALID_SCALE_MESSAGE,
-} from '@dinero.js/core';
+} from '@pesos/core';
 
 /**
  * Create a Dinero object.

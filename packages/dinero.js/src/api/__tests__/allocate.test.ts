@@ -1,4 +1,4 @@
-import { USD, MGA } from '@dinero.js/currencies';
+import { USD, MGA } from '@pesos/currencies';
 import Big from 'big.js';
 
 import { allocate, toSnapshot } from '..';

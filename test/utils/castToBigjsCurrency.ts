@@ -1,5 +1,5 @@
-import Big from 'big.js';
-import type { Currency } from 'dinero.js';
+import type { Currency } from '@pesos/dinero.js';
+import { Big } from 'big.js';
 
 export function castToBigjsCurrency(currency: Currency<number>): Currency<Big> {
   return {

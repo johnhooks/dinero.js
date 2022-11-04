@@ -3,6 +3,7 @@ export * from './dinero';
 export type {
   Calculator,
   ComparisonOperator,
+  Currency,
   Dinero,
   DineroFactory,
   DineroOptions,
@@ -11,7 +12,7 @@ export type {
   Formatter,
   Rates,
   Transformer,
-} from '@dinero.js/core';
+} from '@pesos/core';
 export {
   createDinero,
   down,
@@ -22,5 +23,4 @@ export {
   halfTowardsZero,
   halfUp,
   up,
-} from '@dinero.js/core';
-export type { Currency } from '@dinero.js/currencies';
+} from '@pesos/core';

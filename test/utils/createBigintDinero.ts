@@ -1,6 +1,6 @@
-import { calculator } from '@dinero.js/calculator-bigint';
-import { createDinero } from 'dinero.js';
-import type { DineroOptions } from 'dinero.js';
+import { calculator } from '@pesos/calculator-bigint';
+import { createDinero } from '@pesos/dinero.js';
+import type { DineroOptions } from '@pesos/dinero.js';
 
 const dinero = createDinero({ calculator });
 

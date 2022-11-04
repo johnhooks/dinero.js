@@ -1,5 +1,5 @@
-import { safeAdd } from '@dinero.js/core';
-import type { AddParams } from '@dinero.js/core';
+import { safeAdd } from '@pesos/core';
+import type { AddParams } from '@pesos/core';
 
 /**
  * Add up the passed Dinero objects.

@@ -1,5 +1,5 @@
-import { transformScale as coreTransformScale } from '@dinero.js/core';
-import type { TransformScaleParams } from '@dinero.js/core';
+import { transformScale as coreTransformScale } from '@pesos/core';
+import type { TransformScaleParams } from '@pesos/core';
 
 /**
  * Transform a Dinero object to a new scale.

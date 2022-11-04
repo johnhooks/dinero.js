@@ -1,4 +1,4 @@
-import type { BinaryOperation } from '@dinero.js/core';
+import type { BinaryOperation } from '@pesos/core';
 
 /**
  * Returns an number to the power of an exponent.

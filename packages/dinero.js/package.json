@@ -1,5 +1,5 @@
 {
-  "name": "dinero.js",
+  "name": "@pesos/dinero.js",
   "version": "2.0.0-alpha.8",
   "description": "Create, calculate, and format money in JavaScript and TypeScript",
   "keywords": [
@@ -10,17 +10,23 @@
     "pure",
     "side-effect free"
   ],
-  "homepage": "https://v2.dinerojs.com",
-  "bugs": "https://github.com/dinerojs/dinero.js/issues",
+  "homepage": "https://github.com/johnhooks/dinero.js",
+  "bugs": "https://github.com/johnhooks/dinero.js/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dinerojs/dinero.js.git"
+    "url": "https://github.com/johnhooks/dinero.js.git"
   },
   "license": "MIT",
-  "author": {
-    "name": "Sarah Dayan",
-    "url": "https://sarahdayan.dev"
-  },
+  "contributors": [
+    {
+      "name": "Sarah Dayan",
+      "url": "https://sarahdayan.dev"
+    },
+    {
+      "name": "John Hooks",
+      "url": "https://johnhooks.io"
+    }
+  ],
   "sideEffects": false,
   "main": "dist/cjs/index.js",
   "umd:main": "dist/umd/index.production.js",
@@ -44,11 +50,8 @@
     "watch": "watch \"yarn on:change\" --ignoreDirectoryPattern \"/dist/\""
   },
   "dependencies": {
-    "@dinero.js/calculator-number": "2.0.0-alpha.8",
-    "@dinero.js/core": "2.0.0-alpha.8",
-    "@dinero.js/currencies": "2.0.0-alpha.8"
-  },
-  "devDependencies": {
-    "@dinero.js/calculator-bigint": "2.0.0-alpha.8"
+    "@pesos/calculator-number": "2.0.0-alpha.8",
+    "@pesos/core": "2.0.0-alpha.8",
+    "@pesos/currencies": "2.0.0-alpha.8"
   }
 }

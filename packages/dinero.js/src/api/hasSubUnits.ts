@@ -1,5 +1,5 @@
-import { hasSubUnits as coreHasSubUnits } from '@dinero.js/core';
-import type { HasSubUnitsParams } from '@dinero.js/core';
+import { hasSubUnits as coreHasSubUnits } from '@pesos/core';
+import type { HasSubUnitsParams } from '@pesos/core';
 
 /**
  * Check whether a Dinero object has minor currency units.

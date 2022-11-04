@@ -1,5 +1,5 @@
-import { equal as coreEqual } from '@dinero.js/core';
-import type { EqualParams } from '@dinero.js/core';
+import { equal as coreEqual } from '@pesos/core';
+import type { EqualParams } from '@pesos/core';
 
 /**
  * Check whether the value of a Dinero object is equal to another.

@@ -1,5 +1,5 @@
 {
-  "name": "@dinero.js/core",
+  "name": "@pesos/core",
   "version": "2.0.0-alpha.8",
   "description": "Common code between Dinero.js packages",
   "keywords": [
@@ -8,17 +8,23 @@
     "amount",
     "immutable"
   ],
-  "homepage": "https://v2.dinerojs.com",
-  "bugs": "https://github.com/dinerojs/dinero.js/issues",
+  "homepage": "https://github.com/johnhooks/dinero.js",
+  "bugs": "https://github.com/johnhooks/dinero.js/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dinerojs/dinero.js.git"
+    "url": "https://github.com/johnhooks/dinero.js.git"
   },
   "license": "MIT",
-  "author": {
-    "name": "Sarah Dayan",
-    "url": "https://sarahdayan.dev"
-  },
+  "contributors": [
+    {
+      "name": "Sarah Dayan",
+      "url": "https://sarahdayan.dev"
+    },
+    {
+      "name": "John Hooks",
+      "url": "https://johnhooks.io"
+    }
+  ],
   "sideEffects": false,
   "main": "dist/cjs/index.js",
   "umd:main": "dist/umd/index.production.js",
@@ -40,8 +46,5 @@
     "on:change": "concurrently \"yarn build:esm\" \"yarn build:types\"",
     "prepare": "yarn build:esm && yarn build:types",
     "watch": "watch \"yarn on:change\" --ignoreDirectoryPattern \"/dist/\""
-  },
-  "dependencies": {
-    "@dinero.js/currencies": "2.0.0-alpha.8"
   }
 }

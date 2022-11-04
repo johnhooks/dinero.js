@@ -1,4 +1,4 @@
-import type { Currency } from 'dinero.js';
+import type { Currency } from '@pesos/dinero.js';
 
 export function castToBigintCurrency(
   currency: Currency<number>

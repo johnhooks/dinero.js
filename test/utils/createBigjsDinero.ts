@@ -1,6 +1,6 @@
-import Big from 'big.js';
-import { createDinero } from 'dinero.js';
-import type { DineroOptions, ComparisonOperator } from 'dinero.js';
+import { createDinero } from '@pesos/dinero.js';
+import type { DineroOptions, ComparisonOperator } from '@pesos/dinero.js';
+import { Big } from 'big.js';
 
 const dinero = createDinero({
   calculator: {

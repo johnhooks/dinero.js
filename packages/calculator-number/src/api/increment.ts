@@ -1,4 +1,4 @@
-import type { UnaryOperation } from '@dinero.js/core';
+import type { UnaryOperation } from '@pesos/core';
 
 /**
  * Returns an incremented number.

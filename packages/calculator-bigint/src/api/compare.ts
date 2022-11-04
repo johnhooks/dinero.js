@@ -1,5 +1,5 @@
-import { ComparisonOperator } from '@dinero.js/core';
-import type { BinaryOperation } from '@dinero.js/core';
+import { ComparisonOperator } from '@pesos/core';
+import type { BinaryOperation } from '@pesos/core';
 
 /**
  * Compare two bigints.

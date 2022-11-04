@@ -1,4 +1,4 @@
-import type { Currency } from '../../../types';
+import type { Currency } from '@pesos/core';
 
 /**
  * Bosnia and Herzegovina convertible mark.

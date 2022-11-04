@@ -1,5 +1,5 @@
-import { safeLessThanOrEqual } from '@dinero.js/core';
-import type { LessThanOrEqualParams } from '@dinero.js/core';
+import { safeLessThanOrEqual } from '@pesos/core';
+import type { LessThanOrEqualParams } from '@pesos/core';
 
 /**
  * Check whether the value of a Dinero object is lesser than or equal to another.
