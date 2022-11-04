@@ -1,5 +1,5 @@
-import { USD } from '@pesos/currencies';
-import Big from 'big.js';
+import { USD, MGA } from '@pesos/currencies';
+import { Big } from 'big.js';
 
 import { toSnapshot, transformScale } from '..';
 import {

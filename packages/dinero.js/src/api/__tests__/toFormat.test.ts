@@ -1,6 +1,6 @@
-import { USD } from '@pesos/currencies';
-import Big from 'big.js';
-import type { Dinero } from 'dinero.js';
+import { USD, MGA } from '@pesos/currencies';
+import type { Dinero } from '@pesos/dinero.js';
+import { Big } from 'big.js';
 
 import { toFormat } from '..';
 import {
