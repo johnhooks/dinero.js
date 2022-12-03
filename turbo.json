@@ -1,0 +1,59 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build:clean": {
+      "inputs": ["lib/**/*", "dist/**/*"],
+      "outputs": []
+    },
+    "build:tsc": {
+      "dependsOn": ["^build:tsc"],
+      "inputs": ["src/**/*.ts", "tsconfig.json"],
+      "outputs": ["lib/**/*.d.ts"]
+    },
+    "build:types": {
+      "dependsOn": ["^build:types", "build:tsc"],
+      "inputs": ["lib/**/*.d.ts", "api-extractor.json"],
+      "outputs": ["etc/**/*", "dist/esm/index.d.ts"]
+    },
+    "build:esm": {
+      "dependsOn": [],
+      "inputs": ["src/**/*.ts"],
+      "outputs": ["dist/esm/**/*.js"]
+    },
+    "build:umd:cjs": {
+      "dependsOn": ["build:esm"],
+      "inputs": ["src/**/*.ts"],
+      "outputs": ["dist/cjs/**/*.js", "dist/umd/**/*.js"]
+    },
+    "test": {
+      "dependsOn": [],
+      "inputs": ["src/**/*.ts", "jest.config.ts"],
+      "outputs": []
+    },
+    "build": {
+      "dependsOn": ["build:esm", "build:umd:cjs", "build:types"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      // A package's `lint` script has no dependencies and
+      // can be run whenever. It also has no filesystem outputs.
+      "outputs": [],
+      "inputs": ["**/*.ts", "**/*.js"]
+    },
+    "prepare": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    }
+  },
+  "globalDependencies": [
+    ".eslintrc.js",
+    ".prettierrc",
+    "tsconfig.json",
+    "babel.config.js",
+    "api-extractor.json",
+    "scripts/**/*"
+  ]
+}

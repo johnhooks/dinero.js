@@ -1,0 +1,55 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - 'ci/*'
+
+permissions:
+  checks: write
+  contents: read
+  statuses: write
+  pull-requests: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        command: ['ci:lint', 'ci:test', 'ci:build', 'test:types', 'test:size']
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Turborepo local server
+        uses: felixmosh/turborepo-gh-artifacts@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          server-token: ${{ secrets.TURBO_TOKEN }}
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install Packages
+        run: yarn install --frozen-lockfile # this won't work for the script `test:size`
+        env:
+          CI: true
+
+      - name: ${{ matrix.command }}
+        run: yarn ${{ matrix.command }}
