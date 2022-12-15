@@ -1,7 +1,12 @@
-import type { Calculator, Dinero } from '../types';
-import { computeBase, countTrailingZeros, equal, maximum } from '../utils';
+import type { Calculator, Dinero } from '../types/index.js';
+import {
+  computeBase,
+  countTrailingZeros,
+  equal,
+  maximum,
+} from '../utils/index.js';
 
-import { transformScale } from './transformScale';
+import { transformScale } from './transformScale.js';
 
 export type TrimScaleParams<TAmount> = readonly [dineroObject: Dinero<TAmount>];
 

@@ -1,7 +1,8 @@
 import type { DivideOperation } from '..';
-import { sign, isHalf, absolute } from '../utils';
+import { sign, isHalf, absolute } from '../utils/index.js';
 
-import { halfUp, down } from '.';
+import { down } from './down.js';
+import { halfUp } from './halfUp.js';
 
 export const halfTowardsZero: DivideOperation = (
   amount,

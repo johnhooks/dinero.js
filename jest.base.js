@@ -13,14 +13,14 @@ export default {
     __DEV__: true,
     __TEST__: true,
   },
+  moduleFileExtensions: ['js', 'ts'],
+  resolver: '<rootDir>../../scripts/jest/resolver.cjs',
+  transform: { '.*\\.ts$': '@swc/jest' },
   // This module mapper is for the Jest configurations in the `packages` folders
   // It is overridden by the top-level Jest configuration
   moduleNameMapper: {
     '^test-utils$': '<rootDir>/../../test/utils/',
     '^@dinero.js/(.*)$': '<rootDir>/../$1/src/',
     '^dinero.js$': '<rootDir>/../dinero.js/src/',
-  },
-  transform: {
-    '\\.ts': ['babel-jest', { rootMode: 'upward' }],
   },
 };

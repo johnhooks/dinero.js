@@ -1,5 +1,5 @@
-import type { Calculator, Dinero } from '../types';
-import { greaterThanOrEqual } from '../utils';
+import type { Calculator, Dinero } from '../types/index.js';
+import { greaterThanOrEqual } from '../utils/index.js';
 
 export type IsPositiveParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>

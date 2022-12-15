@@ -1,9 +1,14 @@
-import { NON_DECIMAL_CURRENCY_MESSAGE } from '../checks';
-import { assert } from '../helpers';
-import type { Calculator, Dinero, Formatter, Transformer } from '../types';
-import { absolute, computeBase, equal, isArray } from '../utils';
+import { NON_DECIMAL_CURRENCY_MESSAGE } from '../checks/messages.js';
+import { assert } from '../helpers/assert.js';
+import type {
+  Calculator,
+  Dinero,
+  Formatter,
+  Transformer,
+} from '../types/index.js';
+import { absolute, computeBase, equal, isArray } from '../utils/index.js';
 
-import { toUnits } from './toUnits';
+import { toUnits } from './toUnits.js';
 
 export type ToDecimalParams<TAmount, TOutput> = readonly [
   dineroObject: Dinero<TAmount>,

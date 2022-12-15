@@ -2,7 +2,7 @@
 import path from 'path';
 import * as url from 'url';
 
-import { exec } from './utils/exec.mjs';
+import { exec } from './utils/exec.js';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 

@@ -1,6 +1,7 @@
 {
   "name": "@dinero.js/core",
   "version": "2.0.0-alpha.12",
+  "type": "module",
   "description": "Common code between Dinero.js packages",
   "keywords": [
     "money",
@@ -34,10 +35,10 @@
     "build:clean": "rimraf ./{dist,temp}",
     "build:esm": "babel src --root-mode upward --extensions '.ts' --out-dir dist/esm --ignore '**/*/__tests__/'",
     "build:definitions": "tsc -b",
-    "build:types": "node ../../scripts/build-types.mjs",
+    "build:types": "node ../../scripts/build-types.js",
     "build:umd:cjs": "rollup --config",
-    "lint": "node ../../scripts/lint.mjs --ext .js,.ts .",
-    "test": "node ../../scripts/test.mjs --projects=./packages/core"
+    "lint": "node ../../scripts/lint.js --ext .js,.ts .",
+    "test": "node ../../scripts/test.js --projects=./packages/core"
   },
   "dependencies": {
     "@dinero.js/currencies": "2.0.0-alpha.12"

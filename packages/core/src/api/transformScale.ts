@@ -1,6 +1,6 @@
-import { down } from '../divide';
-import type { Calculator, Dinero, DivideOperation } from '../types';
-import { computeBase, greaterThan } from '../utils';
+import { down } from '../divide/index.js';
+import type { Calculator, Dinero, DivideOperation } from '../types/index.js';
+import { computeBase, greaterThan } from '../utils/index.js';
 
 export type TransformScaleParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>,

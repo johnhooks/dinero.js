@@ -1,5 +1,5 @@
 import type { DivideOperation } from '..';
-import { greaterThanOrEqual } from '../utils';
+import { greaterThanOrEqual } from '../utils/index.js';
 
 export const up: DivideOperation = (amount, factor, calculator) => {
   const greaterThanOrEqualFn = greaterThanOrEqual(calculator);

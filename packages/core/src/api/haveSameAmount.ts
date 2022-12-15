@@ -1,7 +1,7 @@
-import type { Calculator, Dinero } from '../types';
-import { equal } from '../utils';
+import type { Calculator, Dinero } from '../types/index.js';
+import { equal } from '../utils/index.js';
 
-import { normalizeScale } from './normalizeScale';
+import { normalizeScale } from './normalizeScale.js';
 
 export type HaveSameAmountParams<TAmount> = readonly [
   dineroObjects: ReadonlyArray<Dinero<TAmount>>
