@@ -1,5 +1,5 @@
-import type { Dinero } from '../types';
-import { computeBase, equal } from '../utils';
+import type { Dinero } from '../types/index.js';
+import { computeBase, equal } from '../utils/index.js';
 
 export function haveSameCurrency<TAmount>(
   dineroObjects: ReadonlyArray<Dinero<TAmount>>

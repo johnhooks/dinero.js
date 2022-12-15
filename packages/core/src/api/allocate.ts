@@ -1,7 +1,7 @@
 /* eslint-disable functional/no-expression-statement */
-import { INVALID_RATIOS_MESSAGE } from '../checks';
-import { assert } from '../helpers';
-import type { Calculator, Dinero, ScaledAmount } from '../types';
+import { INVALID_RATIOS_MESSAGE } from '../checks/messages.js';
+import { assert } from '../helpers/assert.js';
+import type { Calculator, Dinero, ScaledAmount } from '../types/index.js';
 import {
   distribute,
   equal,
@@ -9,9 +9,9 @@ import {
   greaterThan,
   greaterThanOrEqual,
   maximum,
-} from '../utils';
+} from '../utils/index.js';
 
-import { transformScale } from './transformScale';
+import { transformScale } from './transformScale.js';
 
 type UnsafeAllocateParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>,

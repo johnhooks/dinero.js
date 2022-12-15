@@ -9,7 +9,7 @@ import {
   power,
   subtract,
   zero,
-} from './api';
+} from './api/index.js';
 
 export const calculator = {
   add,

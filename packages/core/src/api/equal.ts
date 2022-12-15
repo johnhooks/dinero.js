@@ -1,7 +1,7 @@
-import type { Calculator, Dinero } from '../types';
+import type { Calculator, Dinero } from '../types/index.js';
 
-import { haveSameAmount } from './haveSameAmount';
-import { haveSameCurrency } from './haveSameCurrency';
+import { haveSameAmount } from './haveSameAmount.js';
+import { haveSameCurrency } from './haveSameCurrency.js';
 
 export type EqualParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>,

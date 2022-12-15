@@ -1,5 +1,5 @@
-export * from './api';
-export * from './dinero';
+export * from './api/index.js';
+export * from './dinero.js';
 export type {
   Calculator,
   ComparisonOperator,

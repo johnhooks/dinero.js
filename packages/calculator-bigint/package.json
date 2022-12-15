@@ -1,6 +1,7 @@
 {
   "name": "@dinero.js/calculator-bigint",
   "version": "2.0.0-alpha.12",
+  "type": "module",
   "description": "Bigint calculator implementation for Dinero.js",
   "keywords": [
     "money",
@@ -36,10 +37,10 @@
     "build:clean": "rimraf ./{dist,temp}",
     "build:esm": "babel src --root-mode upward --extensions '.ts' --out-dir dist/esm --ignore '**/*/__tests__/'",
     "build:definitions": "tsc -b",
-    "build:types": "node ../../scripts/build-types.mjs",
+    "build:types": "node ../../scripts/build-types.js",
     "build:umd:cjs": "rollup --config",
-    "lint": "node ../../scripts/lint.mjs --ext .js,.ts .",
-    "test": "node ../../scripts/test.mjs --projects=./packages/calculator-bigint"
+    "lint": "node ../../scripts/lint.js --ext .js,.ts .",
+    "test": "node ../../scripts/test.js --projects=./packages/calculator-bigint"
   },
   "dependencies": {
     "@dinero.js/core": "2.0.0-alpha.12"

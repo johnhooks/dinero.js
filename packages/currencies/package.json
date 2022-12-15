@@ -1,6 +1,7 @@
 {
   "name": "@dinero.js/currencies",
   "version": "2.0.0-alpha.12",
+  "type": "module",
   "description": "Common currency implementations for Dinero.js",
   "keywords": [
     "money",
@@ -40,8 +41,8 @@
     "build:clean": "rimraf ./{dist,temp}",
     "build:esm": "babel src --root-mode upward --extensions '.ts' --out-dir dist/esm --ignore '**/*/__tests__/'",
     "build:definitions": "tsc -b",
-    "build:types": "node ../../scripts/build-types.mjs",
+    "build:types": "node ../../scripts/build-types.js",
     "build:umd:cjs": "rollup --config",
-    "lint": "node ../../scripts/lint.mjs --ext .js,.ts ."
+    "lint": "node ../../scripts/lint.js --ext .js,.ts ."
   }
 }

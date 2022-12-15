@@ -1,7 +1,8 @@
 import type { DivideOperation } from '..';
-import { greaterThan, isHalf, absolute } from '../utils';
+import { greaterThan, isHalf, absolute } from '../utils/index.js';
 
-import { down, up } from '.';
+import { down } from './down.js';
+import { up } from './up.js';
 
 export const halfUp: DivideOperation = (amount, factor, calculator) => {
   const greaterThanFn = greaterThan(calculator);

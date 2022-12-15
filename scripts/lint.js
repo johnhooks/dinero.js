@@ -2,7 +2,7 @@
 import path from 'path';
 import * as url from 'url';
 
-import { exec } from './utils/exec.mjs';
+import { exec } from './utils/exec.js';
 
 const eslintPath = path.resolve(
   url.fileURLToPath(new URL('.', import.meta.url)),
@@ -18,7 +18,7 @@ const args = process.argv.slice(2);
  * up the file tree for the .eslintrc or .eslintignore files.
  */
 const eslintArgs = [
-  '--config=../../.eslintrc.js',
+  '--config=../../.eslintrc.cjs',
   '--ignore-path=../../.eslintignore',
   ...args,
 ];

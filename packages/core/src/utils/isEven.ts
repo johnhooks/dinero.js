@@ -1,4 +1,4 @@
-import type { Calculator } from '../types';
+import type { Calculator } from '../types/index.js';
 
 import { equal } from '.';
 

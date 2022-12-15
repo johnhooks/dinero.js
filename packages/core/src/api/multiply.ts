@@ -1,7 +1,7 @@
-import type { Calculator, Dinero, ScaledAmount } from '../types';
-import { getAmountAndScale } from '../utils';
+import type { Calculator, Dinero, ScaledAmount } from '../types/index.js';
+import { getAmountAndScale } from '../utils/index.js';
 
-import { transformScale } from './transformScale';
+import { transformScale } from './transformScale.js';
 
 export type MultiplyParams<TAmount> = readonly [
   multiplicand: Dinero<TAmount>,

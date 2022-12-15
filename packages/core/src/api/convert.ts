@@ -1,9 +1,9 @@
 import type { Currency } from '@dinero.js/currencies';
 
-import type { Calculator, Dinero, Rates } from '../types';
-import { getAmountAndScale, maximum } from '../utils';
+import type { Calculator, Dinero, Rates } from '../types/index.js';
+import { getAmountAndScale, maximum } from '../utils/index.js';
 
-import { transformScale } from './transformScale';
+import { transformScale } from './transformScale.js';
 
 export type ConvertParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>,

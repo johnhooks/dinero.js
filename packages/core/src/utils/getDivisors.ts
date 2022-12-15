@@ -1,4 +1,4 @@
-import type { Calculator } from '../types';
+import type { Calculator } from '../types/index.js';
 
 export function getDivisors<TAmount>(calculator: Calculator<TAmount>) {
   const { multiply } = calculator;

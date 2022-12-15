@@ -1,4 +1,4 @@
-import type { Rate, ScaledAmount } from '../types';
+import type { Rate, ScaledAmount } from '../types/index.js';
 
 export function isScaledAmount<TAmount>(
   amount: Rate<TAmount>

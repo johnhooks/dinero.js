@@ -1,5 +1,10 @@
 /* eslint-disable functional/no-mixed-type, functional/no-return-void, functional/no-expression-statement */
-import type { Calculator, Dinero, DineroOptions, Formatter } from '../types';
+import type {
+  Calculator,
+  Dinero,
+  DineroOptions,
+  Formatter,
+} from '../types/index.js';
 
 export type CreateDineroOptions<TAmount> = {
   readonly calculator: Calculator<TAmount>;
