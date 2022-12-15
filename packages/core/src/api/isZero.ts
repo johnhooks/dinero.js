@@ -1,5 +1,5 @@
-import type { Calculator, Dinero } from '../types';
-import { equal } from '../utils';
+import type { Calculator, Dinero } from '../types/index.js';
+import { equal } from '../utils/index.js';
 
 export type IsZeroParams<TAmount> = readonly [dineroObject: Dinero<TAmount>];
 

@@ -1,5 +1,5 @@
-import type { Calculator, Dinero, Transformer } from '../types';
-import { isArray, getDivisors } from '../utils';
+import type { Calculator, Dinero, Transformer } from '../types/index.js';
+import { isArray, getDivisors } from '../utils/index.js';
 
 export type ToUnitsParams<TAmount, TOutput> = readonly [
   dineroObject: Dinero<TAmount>,

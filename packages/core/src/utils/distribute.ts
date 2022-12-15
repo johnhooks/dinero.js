@@ -1,11 +1,11 @@
 /* eslint-disable functional/no-let, functional/no-loop-statement, functional/immutable-data, functional/no-expression-statement */
 
-import type { Calculator } from '../types';
+import type { Calculator } from '../types/index.js';
 
-import { equal } from './equal';
-import { greaterThan } from './greaterThan';
-import { greaterThanOrEqual } from './greaterThanOrEqual';
-import { lessThan } from './lessThan';
+import { equal } from './equal.js';
+import { greaterThan } from './greaterThan.js';
+import { greaterThanOrEqual } from './greaterThanOrEqual.js';
+import { lessThan } from './lessThan.js';
 
 type DistributeCalculator<TAmount> = Calculator<TAmount>;
 

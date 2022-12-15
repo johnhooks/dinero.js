@@ -13,6 +13,9 @@ export default {
     __DEV__: true,
     __TEST__: true,
   },
+  moduleFileExtensions: ['js', 'ts'],
+  resolver: '<rootDir>/scripts/jest/resolver.cjs',
+  transform: { '.*\\.ts$': '@swc/jest' },
   moduleNameMapper: {
     '^test-utils$': '<rootDir>/test/utils/',
     '^@dinero.js/(.*)$': '<rootDir>/packages/$1/src/',

@@ -6,7 +6,7 @@ import babel from 'rollup-plugin-babel';
 import filesize from 'rollup-plugin-filesize';
 import { terser } from 'rollup-plugin-terser';
 
-import { getBundleBanner } from '../getBundleBanner.mjs';
+import { getBundleBanner } from '../getBundleBanner.js';
 
 const BUILD_MODES = ['development', 'production'];
 const extensions = ['.js', '.ts', '.json'];
@@ -23,7 +23,7 @@ function createRollupConfig({ mode, format, input, pkg, config }) {
   if (format === 'cjs') {
     bundles.push({
       ...config,
-      input: '../../scripts/rollup/cjs.js',
+      input: '../../scripts/rollup/cjs.cjs',
       output: {
         file: `dist/cjs/${input}.js`,
         format,

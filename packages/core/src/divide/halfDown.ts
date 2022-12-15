@@ -1,5 +1,5 @@
 import type { DivideOperation } from '..';
-import { isHalf } from '../utils';
+import { isHalf } from '../utils/index.js';
 
 import { down, halfUp } from '.';
 

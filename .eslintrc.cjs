@@ -21,7 +21,8 @@ module.exports = {
       },
     ],
     'jsdoc/check-param-names': ['off'],
-    'import/extensions': ['off'],
+    'import/extensions': ['error', 'never', { js: 'always', ts: 'always' }],
+    'import/no-unresolved': ['off'],
     'import/order': [
       'error',
       {
@@ -47,6 +48,7 @@ module.exports = {
       files: ['test/**/*'],
       rules: {
         'import/no-extraneous-dependencies': 'off',
+        'import/extensions': ['off'],
       },
     },
     {
@@ -55,12 +57,30 @@ module.exports = {
         'functional/no-expression-statement': ['off'],
         'import/no-extraneous-dependencies': ['off'],
         'sonarjs/no-duplicate-string': ['off'],
+        'import/extensions': ['off'],
       },
     },
     {
       files: ['**/*.ts'],
       rules: {
         'no-undef': 'off',
+      },
+    },
+    {
+      files: '**/*.cjs',
+      rules: {
+        'import/extensions': ['off'],
+        'import/no-commonjs': ['off'],
+        'functional/immutable-data': ['off'],
+        'functional/no-loop-statement': ['off'],
+        'functional/no-try-statement': ['off'],
+        'functional/no-expression-statement': ['off'],
+      },
+    },
+    {
+      files: 'examples/**/*',
+      rules: {
+        'import/extensions': ['off'],
       },
     },
   ],
@@ -71,7 +91,13 @@ module.exports = {
     'import/resolver': {
       typescript: {
         alwaysTryTypes: true,
+        extensions: ['js'],
       },
     },
+  },
+  env: {
+    es2020: true,
+    node: true,
+    browser: true,
   },
 };

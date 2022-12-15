@@ -1,6 +1,6 @@
-import type { Calculator } from '../types';
+import type { Calculator } from '../types/index.js';
 
-import { greaterThan } from './greaterThan';
+import { greaterThan } from './greaterThan.js';
 
 type MinimumCalculator<TAmount> = Calculator<TAmount>;
 

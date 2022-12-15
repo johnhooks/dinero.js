@@ -1,7 +1,7 @@
-import type { Calculator } from '../types';
+import type { Calculator } from '../types/index.js';
 
-import { equal } from './equal';
-import { greaterThan } from './greaterThan';
+import { equal } from './equal.js';
+import { greaterThan } from './greaterThan.js';
 
 type GreaterThanOrEqualCalculator<TAmount> = Calculator<TAmount>;
 

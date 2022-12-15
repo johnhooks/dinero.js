@@ -1,5 +1,5 @@
-import type { Calculator, Dinero } from '../types';
-import { lessThan } from '../utils';
+import type { Calculator, Dinero } from '../types/index.js';
+import { lessThan } from '../utils/index.js';
 
 export type IsNegativeParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>

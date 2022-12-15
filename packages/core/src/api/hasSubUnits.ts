@@ -1,5 +1,5 @@
-import type { Calculator, Dinero } from '../types';
-import { computeBase, equal } from '../utils';
+import type { Calculator, Dinero } from '../types/index.js';
+import { computeBase, equal } from '../utils/index.js';
 
 export type HasSubUnitsParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>

@@ -1,11 +1,11 @@
 /* eslint-disable functional/no-expression-statement */
-import { UNEQUAL_CURRENCIES_MESSAGE } from '../checks';
-import { assert } from '../helpers';
-import type { Calculator, Dinero } from '../types';
-import { lessThanOrEqual as lte } from '../utils';
+import { UNEQUAL_CURRENCIES_MESSAGE } from '../checks/messages.js';
+import { assert } from '../helpers/assert.js';
+import type { Calculator, Dinero } from '../types/index.js';
+import { lessThanOrEqual as lte } from '../utils/index.js';
 
-import { haveSameCurrency } from './haveSameCurrency';
-import { normalizeScale } from './normalizeScale';
+import { haveSameCurrency } from './haveSameCurrency.js';
+import { normalizeScale } from './normalizeScale.js';
 
 export type LessThanOrEqualParams<TAmount> = readonly [
   dineroObject: Dinero<TAmount>,

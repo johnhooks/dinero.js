@@ -1,7 +1,7 @@
 /* eslint-disable functional/no-let, functional/no-loop-statement, functional/no-expression-statement */
-import type { Calculator } from '../types';
+import type { Calculator } from '../types/index.js';
 
-import { equal } from './equal';
+import { equal } from './equal.js';
 
 type CountTrailingZerosCalculator<TAmount> = Calculator<TAmount>;
 
