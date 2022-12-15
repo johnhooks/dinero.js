@@ -5,5 +5,5 @@ module.exports = {
     `eslint --ext .js,.ts --fix ${filenames.join(' ')}`,
   'website/**/*.(js|jsx|ts|tsx)': () => `yarn --cwd website lint --fix`,
   '**/*.(js|mjs|jsx|ts|tsx)': (filenames) =>
-    `yarn format ${filenames.join(' ')}`,
+    `prettier --write ${filenames.join(' ')}`,
 };
