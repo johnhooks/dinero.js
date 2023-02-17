@@ -1,10 +1,6 @@
 import { calculator } from '../calculator';
 
 import { convert as coreConvert } from '@dinero.js/core';
-import type { ConvertParams, Dinero } from '@dinero.js/core';
-
-const converter = coreConvert(calculator);
-
 /**
  * Convert a Dinero object to another currency.
  *
@@ -16,8 +12,4 @@ const converter = coreConvert(calculator);
  *
  * @public
  */
-export function convert(
-  ...[dineroObject, newCurrency, rates]: ConvertParams<number>
-): Dinero<number> {
-  return converter(dineroObject, newCurrency, rates);
-}
+export const convert = coreConvert(calculator);

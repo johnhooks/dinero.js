@@ -1,10 +1,6 @@
 import { calculator } from '../calculator';
 
 import { safeGreaterThan } from '@dinero.js/core';
-import type { GreaterThanParams } from '@dinero.js/core';
-
-const greaterThanFn = safeGreaterThan(calculator);
-
 /**
  * Check whether the value of a Dinero object is greater than another.
  *
@@ -15,8 +11,4 @@ const greaterThanFn = safeGreaterThan(calculator);
  *
  * @public
  */
-export function greaterThan(
-  ...[dineroObject, comparator]: GreaterThanParams<number>
-): boolean {
-  return greaterThanFn(dineroObject, comparator);
-}
+export const greaterThan = safeGreaterThan(calculator);

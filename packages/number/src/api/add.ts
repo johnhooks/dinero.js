@@ -1,9 +1,6 @@
 import { calculator } from '../calculator';
 
 import { safeAdd } from '@dinero.js/core';
-import type { AddParams, Dinero } from '@dinero.js/core';
-
-const addFn = safeAdd(calculator);
 
 /**
  * Add up the passed Dinero objects.
@@ -15,6 +12,4 @@ const addFn = safeAdd(calculator);
  *
  * @public
  */
-export function add(...[augend, addend]: AddParams<number>): Dinero<number> {
-  return addFn(augend, addend);
-}
+export const add = safeAdd(calculator);

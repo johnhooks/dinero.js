@@ -1,9 +1,6 @@
 import { calculator } from '../calculator';
 
 import { transformScale as coreTransformScale } from '@dinero.js/core';
-import type { TransformScaleParams, Dinero } from '@dinero.js/core';
-
-const transformScaleFn = coreTransformScale(calculator);
 
 /**
  * Transform a Dinero object to a new scale.
@@ -16,8 +13,4 @@ const transformScaleFn = coreTransformScale(calculator);
  *
  * @public
  */
-export function transformScale(
-  ...[dineroObject, newScale, divide]: TransformScaleParams<number>
-): Dinero<number> {
-  return transformScaleFn(dineroObject, newScale, divide);
-}
+export const transformScale = coreTransformScale(calculator);

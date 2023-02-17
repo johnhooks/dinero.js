@@ -1,9 +1,6 @@
 import { calculator } from '../calculator';
 
 import { safeLessThanOrEqual } from '@dinero.js/core';
-import type { LessThanOrEqualParams } from '@dinero.js/core';
-
-const lessThanOrEqualFn = safeLessThanOrEqual(calculator);
 
 /**
  * Check whether the value of a Dinero object is lesser than or equal to another.
@@ -15,8 +12,4 @@ const lessThanOrEqualFn = safeLessThanOrEqual(calculator);
  *
  * @public
  */
-export function lessThanOrEqual(
-  ...[dineroObject, comparator]: LessThanOrEqualParams<number>
-): boolean {
-  return lessThanOrEqualFn(dineroObject, comparator);
-}
+export const lessThanOrEqual = safeLessThanOrEqual(calculator);

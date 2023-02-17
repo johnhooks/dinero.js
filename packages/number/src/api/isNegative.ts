@@ -1,9 +1,6 @@
 import { calculator } from '../calculator';
 
 import { isNegative as coreIsNegative } from '@dinero.js/core';
-import type { IsNegativeParams } from '@dinero.js/core';
-
-const isNegativeFn = coreIsNegative(calculator);
 
 /**
  * Check whether a Dinero object is negative.
@@ -14,8 +11,4 @@ const isNegativeFn = coreIsNegative(calculator);
  *
  * @public
  */
-export function isNegative(
-  ...[dineroObject]: IsNegativeParams<number>
-): boolean {
-  return isNegativeFn(dineroObject);
-}
+export const isNegative = coreIsNegative(calculator);

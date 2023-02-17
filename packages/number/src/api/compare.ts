@@ -1,9 +1,6 @@
 import { calculator } from '../calculator';
 
 import { safeCompare } from '@dinero.js/core';
-import type { CompareParams, ComparisonOperator } from '@dinero.js/core';
-
-const compareFn = safeCompare(calculator);
 
 /**
  * Compare the value of a Dinero object relative to another.
@@ -15,8 +12,4 @@ const compareFn = safeCompare(calculator);
  *
  * @public
  */
-export function compare(
-  ...[dineroObject, comparator]: CompareParams<number>
-): ComparisonOperator {
-  return compareFn(dineroObject, comparator);
-}
+export const compare = safeCompare(calculator);

@@ -1,9 +1,6 @@
 import { calculator } from '../calculator';
 
 import { isZero as coreIsZero } from '@dinero.js/core';
-import type { IsZeroParams } from '@dinero.js/core';
-
-const isZeroFn = coreIsZero(calculator);
 
 /**
  * Check whether the value of a Dinero object is zero.
@@ -14,6 +11,4 @@ const isZeroFn = coreIsZero(calculator);
  *
  * @public
  */
-export function isZero(...[dineroObject]: IsZeroParams<number>): boolean {
-  return isZeroFn(dineroObject);
-}
+export const isZero = coreIsZero(calculator);

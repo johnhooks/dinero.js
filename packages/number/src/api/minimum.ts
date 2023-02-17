@@ -1,9 +1,6 @@
 import { calculator } from '../calculator';
 
 import { safeMinimum } from '@dinero.js/core';
-import type { MinimumParams, Dinero } from '@dinero.js/core';
-
-const minimumFn = safeMinimum(calculator);
 
 /**
  * Get the lowest of the passed Dinero objects.
@@ -14,8 +11,4 @@ const minimumFn = safeMinimum(calculator);
  *
  * @public
  */
-export function minimum(
-  ...[dineroObjects]: MinimumParams<number>
-): Dinero<number> {
-  return minimumFn(dineroObjects);
-}
+export const minimum = safeMinimum(calculator);
