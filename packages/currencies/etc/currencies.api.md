@@ -4,122 +4,124 @@
 
 ```ts
 
-// @public
-export const AED: Currency<number>;
+import type { Currency as Currency_2 } from '@dinero.js/core';
 
 // @public
-export const AFN: Currency<number>;
+export const AED: Currency_2<number>;
 
 // @public
-export const ALL: Currency<number>;
+export const AFN: Currency_2<number>;
 
 // @public
-export const AMD: Currency<number>;
+export const ALL: Currency_2<number>;
 
 // @public
-export const ANG: Currency<number>;
+export const AMD: Currency_2<number>;
 
 // @public
-export const AOA: Currency<number>;
+export const ANG: Currency_2<number>;
 
 // @public
-export const ARS: Currency<number>;
+export const AOA: Currency_2<number>;
 
 // @public
-export const AUD: Currency<number>;
+export const ARS: Currency_2<number>;
 
 // @public
-export const AWG: Currency<number>;
+export const AUD: Currency_2<number>;
 
 // @public
-export const AZN: Currency<number>;
+export const AWG: Currency_2<number>;
 
 // @public
-export const BAM: Currency<number>;
+export const AZN: Currency_2<number>;
 
 // @public
-export const BBD: Currency<number>;
+export const BAM: Currency_2<number>;
 
 // @public
-export const BDT: Currency<number>;
+export const BBD: Currency_2<number>;
 
 // @public
-export const BGN: Currency<number>;
+export const BDT: Currency_2<number>;
 
 // @public
-export const BHD: Currency<number>;
+export const BGN: Currency_2<number>;
 
 // @public
-export const BIF: Currency<number>;
+export const BHD: Currency_2<number>;
 
 // @public
-export const BMD: Currency<number>;
+export const BIF: Currency_2<number>;
 
 // @public
-export const BND: Currency<number>;
+export const BMD: Currency_2<number>;
 
 // @public
-export const BOB: Currency<number>;
+export const BND: Currency_2<number>;
 
 // @public
-export const BOV: Currency<number>;
+export const BOB: Currency_2<number>;
 
 // @public
-export const BRL: Currency<number>;
+export const BOV: Currency_2<number>;
 
 // @public
-export const BSD: Currency<number>;
+export const BRL: Currency_2<number>;
 
 // @public
-export const BTN: Currency<number>;
+export const BSD: Currency_2<number>;
 
 // @public
-export const BWP: Currency<number>;
+export const BTN: Currency_2<number>;
 
 // @public
-export const BYN: Currency<number>;
+export const BWP: Currency_2<number>;
 
 // @public
-export const BZD: Currency<number>;
+export const BYN: Currency_2<number>;
 
 // @public
-export const CAD: Currency<number>;
+export const BZD: Currency_2<number>;
 
 // @public
-export const CDF: Currency<number>;
+export const CAD: Currency_2<number>;
 
 // @public
-export const CHE: Currency<number>;
+export const CDF: Currency_2<number>;
 
 // @public
-export const CHF: Currency<number>;
+export const CHE: Currency_2<number>;
 
 // @public
-export const CHW: Currency<number>;
+export const CHF: Currency_2<number>;
 
 // @public
-export const CLF: Currency<number>;
+export const CHW: Currency_2<number>;
 
 // @public
-export const CLP: Currency<number>;
+export const CLF: Currency_2<number>;
 
 // @public
-export const CNY: Currency<number>;
+export const CLP: Currency_2<number>;
 
 // @public
-export const COP: Currency<number>;
+export const CNY: Currency_2<number>;
 
 // @public
-export const COU: Currency<number>;
+export const COP: Currency_2<number>;
 
 // @public
-export const CRC: Currency<number>;
+export const COU: Currency_2<number>;
 
 // @public
-export const CUC: Currency<number>;
+export const CRC: Currency_2<number>;
 
 // @public
-export const CUP: Currency<number>;
+export const CUC: Currency_2<number>;
+
+// @public
+export const CUP: Currency_2<number>;
 
 // @public
 export type Currency<TAmount> = {
@@ -129,385 +131,385 @@ export type Currency<TAmount> = {
 };
 
 // @public
-export const CVE: Currency<number>;
+export const CVE: Currency_2<number>;
 
 // @public
-export const CZK: Currency<number>;
+export const CZK: Currency_2<number>;
 
 // @public
-export const DJF: Currency<number>;
+export const DJF: Currency_2<number>;
 
 // @public
-export const DKK: Currency<number>;
+export const DKK: Currency_2<number>;
 
 // @public
-export const DOP: Currency<number>;
+export const DOP: Currency_2<number>;
 
 // @public
-export const DZD: Currency<number>;
+export const DZD: Currency_2<number>;
 
 // @public
-export const EGP: Currency<number>;
+export const EGP: Currency_2<number>;
 
 // @public
-export const ERN: Currency<number>;
+export const ERN: Currency_2<number>;
 
 // @public
-export const ETB: Currency<number>;
+export const ETB: Currency_2<number>;
 
 // @public
-export const EUR: Currency<number>;
+export const EUR: Currency_2<number>;
 
 // @public
-export const FJD: Currency<number>;
+export const FJD: Currency_2<number>;
 
 // @public
-export const FKP: Currency<number>;
+export const FKP: Currency_2<number>;
 
 // @public
-export const GBP: Currency<number>;
+export const GBP: Currency_2<number>;
 
 // @public
-export const GEL: Currency<number>;
+export const GEL: Currency_2<number>;
 
 // @public
-export const GHS: Currency<number>;
+export const GHS: Currency_2<number>;
 
 // @public
-export const GIP: Currency<number>;
+export const GIP: Currency_2<number>;
 
 // @public
-export const GMD: Currency<number>;
+export const GMD: Currency_2<number>;
 
 // @public
-export const GNF: Currency<number>;
+export const GNF: Currency_2<number>;
 
 // @public
-export const GTQ: Currency<number>;
+export const GTQ: Currency_2<number>;
 
 // @public
-export const GYD: Currency<number>;
+export const GYD: Currency_2<number>;
 
 // @public
-export const HKD: Currency<number>;
+export const HKD: Currency_2<number>;
 
 // @public
-export const HNL: Currency<number>;
+export const HNL: Currency_2<number>;
 
 // @public
-export const HRK: Currency<number>;
+export const HRK: Currency_2<number>;
 
 // @public
-export const HTG: Currency<number>;
+export const HTG: Currency_2<number>;
 
 // @public
-export const HUF: Currency<number>;
+export const HUF: Currency_2<number>;
 
 // @public
-export const IDR: Currency<number>;
+export const IDR: Currency_2<number>;
 
 // @public
-export const ILS: Currency<number>;
+export const ILS: Currency_2<number>;
 
 // @public
-export const INR: Currency<number>;
+export const INR: Currency_2<number>;
 
 // @public
-export const IQD: Currency<number>;
+export const IQD: Currency_2<number>;
 
 // @public
-export const IRR: Currency<number>;
+export const IRR: Currency_2<number>;
 
 // @public
-export const ISK: Currency<number>;
+export const ISK: Currency_2<number>;
 
 // @public
-export const JMD: Currency<number>;
+export const JMD: Currency_2<number>;
 
 // @public
-export const JOD: Currency<number>;
+export const JOD: Currency_2<number>;
 
 // @public
-export const JPY: Currency<number>;
+export const JPY: Currency_2<number>;
 
 // @public
-export const KES: Currency<number>;
+export const KES: Currency_2<number>;
 
 // @public
-export const KGS: Currency<number>;
+export const KGS: Currency_2<number>;
 
 // @public
-export const KHR: Currency<number>;
+export const KHR: Currency_2<number>;
 
 // @public
-export const KMF: Currency<number>;
+export const KMF: Currency_2<number>;
 
 // @public
-export const KPW: Currency<number>;
+export const KPW: Currency_2<number>;
 
 // @public
-export const KRW: Currency<number>;
+export const KRW: Currency_2<number>;
 
 // @public
-export const KWD: Currency<number>;
+export const KWD: Currency_2<number>;
 
 // @public
-export const KYD: Currency<number>;
+export const KYD: Currency_2<number>;
 
 // @public
-export const KZT: Currency<number>;
+export const KZT: Currency_2<number>;
 
 // @public
-export const LAK: Currency<number>;
+export const LAK: Currency_2<number>;
 
 // @public
-export const LBP: Currency<number>;
+export const LBP: Currency_2<number>;
 
 // @public
-export const LKR: Currency<number>;
+export const LKR: Currency_2<number>;
 
 // @public
-export const LRD: Currency<number>;
+export const LRD: Currency_2<number>;
 
 // @public
-export const LSL: Currency<number>;
+export const LSL: Currency_2<number>;
 
 // @public
-export const LYD: Currency<number>;
+export const LYD: Currency_2<number>;
 
 // @public
-export const MAD: Currency<number>;
+export const MAD: Currency_2<number>;
 
 // @public
-export const MDL: Currency<number>;
+export const MDL: Currency_2<number>;
 
 // @public
-export const MGA: Currency<number>;
+export const MGA: Currency_2<number>;
 
 // @public
-export const MKD: Currency<number>;
+export const MKD: Currency_2<number>;
 
 // @public
-export const MMK: Currency<number>;
+export const MMK: Currency_2<number>;
 
 // @public
-export const MNT: Currency<number>;
+export const MNT: Currency_2<number>;
 
 // @public
-export const MOP: Currency<number>;
+export const MOP: Currency_2<number>;
 
 // @public
-export const MRU: Currency<number>;
+export const MRU: Currency_2<number>;
 
 // @public
-export const MUR: Currency<number>;
+export const MUR: Currency_2<number>;
 
 // @public
-export const MVR: Currency<number>;
+export const MVR: Currency_2<number>;
 
 // @public
-export const MWK: Currency<number>;
+export const MWK: Currency_2<number>;
 
 // @public
-export const MXN: Currency<number>;
+export const MXN: Currency_2<number>;
 
 // @public
-export const MXV: Currency<number>;
+export const MXV: Currency_2<number>;
 
 // @public
-export const MYR: Currency<number>;
+export const MYR: Currency_2<number>;
 
 // @public
-export const MZN: Currency<number>;
+export const MZN: Currency_2<number>;
 
 // @public
-export const NAD: Currency<number>;
+export const NAD: Currency_2<number>;
 
 // @public
-export const NGN: Currency<number>;
+export const NGN: Currency_2<number>;
 
 // @public
-export const NIO: Currency<number>;
+export const NIO: Currency_2<number>;
 
 // @public
-export const NOK: Currency<number>;
+export const NOK: Currency_2<number>;
 
 // @public
-export const NPR: Currency<number>;
+export const NPR: Currency_2<number>;
 
 // @public
-export const NZD: Currency<number>;
+export const NZD: Currency_2<number>;
 
 // @public
-export const OMR: Currency<number>;
+export const OMR: Currency_2<number>;
 
 // @public
-export const PAB: Currency<number>;
+export const PAB: Currency_2<number>;
 
 // @public
-export const PEN: Currency<number>;
+export const PEN: Currency_2<number>;
 
 // @public
-export const PGK: Currency<number>;
+export const PGK: Currency_2<number>;
 
 // @public
-export const PHP: Currency<number>;
+export const PHP: Currency_2<number>;
 
 // @public
-export const PKR: Currency<number>;
+export const PKR: Currency_2<number>;
 
 // @public
-export const PLN: Currency<number>;
+export const PLN: Currency_2<number>;
 
 // @public
-export const PYG: Currency<number>;
+export const PYG: Currency_2<number>;
 
 // @public
-export const QAR: Currency<number>;
+export const QAR: Currency_2<number>;
 
 // @public
-export const RON: Currency<number>;
+export const RON: Currency_2<number>;
 
 // @public
-export const RSD: Currency<number>;
+export const RSD: Currency_2<number>;
 
 // @public
-export const RUB: Currency<number>;
+export const RUB: Currency_2<number>;
 
 // @public
-export const RWF: Currency<number>;
+export const RWF: Currency_2<number>;
 
 // @public
-export const SAR: Currency<number>;
+export const SAR: Currency_2<number>;
 
 // @public
-export const SBD: Currency<number>;
+export const SBD: Currency_2<number>;
 
 // @public
-export const SCR: Currency<number>;
+export const SCR: Currency_2<number>;
 
 // @public
-export const SDG: Currency<number>;
+export const SDG: Currency_2<number>;
 
 // @public
-export const SEK: Currency<number>;
+export const SEK: Currency_2<number>;
 
 // @public
-export const SGD: Currency<number>;
+export const SGD: Currency_2<number>;
 
 // @public
-export const SHP: Currency<number>;
+export const SHP: Currency_2<number>;
 
 // @public
-export const SLL: Currency<number>;
+export const SLL: Currency_2<number>;
 
 // @public
-export const SOS: Currency<number>;
+export const SOS: Currency_2<number>;
 
 // @public
-export const SRD: Currency<number>;
+export const SRD: Currency_2<number>;
 
 // @public
-export const SSP: Currency<number>;
+export const SSP: Currency_2<number>;
 
 // @public
-export const STN: Currency<number>;
+export const STN: Currency_2<number>;
 
 // @public
-export const SVC: Currency<number>;
+export const SVC: Currency_2<number>;
 
 // @public
-export const SYP: Currency<number>;
+export const SYP: Currency_2<number>;
 
 // @public
-export const SZL: Currency<number>;
+export const SZL: Currency_2<number>;
 
 // @public
-export const THB: Currency<number>;
+export const THB: Currency_2<number>;
 
 // @public
-export const TJS: Currency<number>;
+export const TJS: Currency_2<number>;
 
 // @public
-export const TMT: Currency<number>;
+export const TMT: Currency_2<number>;
 
 // @public
-export const TND: Currency<number>;
+export const TND: Currency_2<number>;
 
 // @public
-export const TOP: Currency<number>;
+export const TOP: Currency_2<number>;
 
 // @public
-export const TRY: Currency<number>;
+export const TRY: Currency_2<number>;
 
 // @public
-export const TTD: Currency<number>;
+export const TTD: Currency_2<number>;
 
 // @public
-export const TWD: Currency<number>;
+export const TWD: Currency_2<number>;
 
 // @public
-export const TZS: Currency<number>;
+export const TZS: Currency_2<number>;
 
 // @public
-export const UAH: Currency<number>;
+export const UAH: Currency_2<number>;
 
 // @public
-export const UGX: Currency<number>;
+export const UGX: Currency_2<number>;
 
 // @public
-export const USD: Currency<number>;
+export const USD: Currency_2<number>;
 
 // @public
-export const USN: Currency<number>;
+export const USN: Currency_2<number>;
 
 // @public
-export const UYI: Currency<number>;
+export const UYI: Currency_2<number>;
 
 // @public
-export const UYU: Currency<number>;
+export const UYU: Currency_2<number>;
 
 // @public
-export const UYW: Currency<number>;
+export const UYW: Currency_2<number>;
 
 // @public
-export const UZS: Currency<number>;
+export const UZS: Currency_2<number>;
 
 // @public
-export const VES: Currency<number>;
+export const VES: Currency_2<number>;
 
 // @public
-export const VND: Currency<number>;
+export const VND: Currency_2<number>;
 
 // @public
-export const VUV: Currency<number>;
+export const VUV: Currency_2<number>;
 
 // @public
-export const WST: Currency<number>;
+export const WST: Currency_2<number>;
 
 // @public
-export const XAF: Currency<number>;
+export const XAF: Currency_2<number>;
 
 // @public
-export const XCD: Currency<number>;
+export const XCD: Currency_2<number>;
 
 // @public
-export const XOF: Currency<number>;
+export const XOF: Currency_2<number>;
 
 // @public
-export const XPF: Currency<number>;
+export const XPF: Currency_2<number>;
 
 // @public
-export const YER: Currency<number>;
+export const YER: Currency_2<number>;
 
 // @public
-export const ZAR: Currency<number>;
+export const ZAR: Currency_2<number>;
 
 // @public
-export const ZMW: Currency<number>;
+export const ZMW: Currency_2<number>;
 
 // @public
-export const ZWL: Currency<number>;
+export const ZWL: Currency_2<number>;
 
 // (No @packageDocumentation comment for this package)
 

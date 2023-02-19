@@ -15,64 +15,83 @@ env:
   # Used by scripts/build-types.mjs
   CI: true
 
-permissions:
-  checks: write
-  contents: read
-  statuses: write
-  pull-requests: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Prepare Environment
-        uses: ./.github/actions/turbo
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build
-        run: yarn build
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: ./.github/actions/node
+
+      - name: Build package
+        uses: ./.github/actions/build-pkg
+
   lint:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - uses: actions/checkout@v3
-      - name: Prepare Environment
-        uses: ./.github/actions/turbo
+
+      - name: Setup Node.js environment
+        uses: ./.github/actions/node
+
+      - name: Download the build artifact
+        uses: actions/download-artifact@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          name: pkg-build-${{ github.run_id }}
+
       - name: Lint
-        run: yarn lint
+        run: pnpm lint
+
   test:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - uses: actions/checkout@v3
-      - name: Prepare Environment
-        uses: ./.github/actions/turbo
+
+      - name: Setup Node.js environment
+        uses: ./.github/actions/node
+
+      - name: Download the build artifact
+        uses: actions/download-artifact@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          name: pkg-build-${{ github.run_id }}
+
       - name: Test
-        run: yarn test
+        run: pnpm test
+
   test-types:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - uses: actions/checkout@v3
-      - name: Prepare Environment
-        uses: ./.github/actions/turbo
+
+      - name: Setup Node.js environment
+        uses: ./.github/actions/node
+
+      - name: Download the build artifact
+        uses: actions/download-artifact@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          name: pkg-build-${{ github.run_id }}
+
       - name: Test types
-        run: yarn test:types
+        run: pnpm test:types
+
   test-size:
     runs-on: ubuntu-latest
     needs: build
     steps:
       - uses: actions/checkout@v3
-      - name: Prepare Environment
-        uses: ./.github/actions/turbo
+
+      - name: Setup Node.js environment
+        uses: ./.github/actions/node
+
+      - name: Download the build artifact
+        uses: actions/download-artifact@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          name: pkg-build-${{ github.run_id }}
+
       - name: Test bundle size
-        run: yarn test:size
+        run: pnpm test:size

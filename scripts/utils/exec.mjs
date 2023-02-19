@@ -1,4 +1,4 @@
-import { spawn } from 'cross-spawn';
+import { spawn } from 'node:child_process';
 
 /**
  * Async `exec`.

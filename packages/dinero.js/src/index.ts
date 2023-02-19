@@ -2,6 +2,7 @@ export * from './api';
 export * from './dinero';
 export type {
   Calculator,
+  Currency,
   ComparisonOperator,
   Dinero,
   DineroFactory,
@@ -23,4 +24,3 @@ export {
   halfUp,
   up,
 } from '@dinero.js/core';
-export type { Currency } from '@dinero.js/currencies';

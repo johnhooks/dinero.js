@@ -23,7 +23,7 @@ const { format, resolveConfig } = prettier;
 
 const baseOutputDir = path.resolve(
   url.fileURLToPath(new URL('.', import.meta.url)), // __dirname es module style
-  '../packages/currencies/src/iso4217/amendments/168'
+  '../packages/currencies/src/generated/iso4217/amendments/168'
 );
 
 const dirExists = (dirPath) =>
@@ -57,7 +57,7 @@ function createCurrencyConfig({ genericType, imports, mapNumber }) {
           ? mapNumber(maybeBases)
           : `[${maybeBases.map(mapNumber).join(',')}]`;
       return `
-      import type { Currency } from '../../../../types';
+      import type { Currency } from '@dinero.js/core';
       ${imports ? imports.map((text) => `${text}\n`) : ''}
       /**
        * ${description}.

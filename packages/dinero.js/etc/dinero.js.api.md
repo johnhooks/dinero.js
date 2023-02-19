@@ -11,7 +11,7 @@ import type { CompareParams } from '@dinero.js/core';
 import { ComparisonOperator } from '@dinero.js/core';
 import type { ConvertParams } from '@dinero.js/core';
 import { createDinero } from '@dinero.js/core';
-import { Currency } from '@dinero.js/currencies';
+import { Currency } from '@dinero.js/core';
 import { Dinero } from '@dinero.js/core';
 import { DineroFactory } from '@dinero.js/core';
 import { DineroOptions } from '@dinero.js/core';

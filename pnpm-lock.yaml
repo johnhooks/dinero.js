@@ -14,7 +14,7 @@ importers:
       '@rollup/plugin-replace': 3.1.0
       '@types/big.js': 6.1.6
       '@types/jest': 28.1.8
-      '@types/node': ^16.18.12
+      '@types/node': 16.18.12
       '@typescript-eslint/eslint-plugin': 5.38.0
       '@typescript-eslint/parser': 5.38.0
       babel-eslint: 10.1.0
@@ -229,11 +229,9 @@ importers:
       '@dinero.js/calculator-bigint': 2.0.0-alpha.13
       '@dinero.js/calculator-number': 2.0.0-alpha.13
       '@dinero.js/core': 2.0.0-alpha.13
-      '@dinero.js/currencies': 2.0.0-alpha.13
     dependencies:
       '@dinero.js/calculator-number': link:../calculator-number
       '@dinero.js/core': link:../core
-      '@dinero.js/currencies': link:../currencies
     devDependencies:
       '@dinero.js/calculator-bigint': link:../calculator-bigint
 

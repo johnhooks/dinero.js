@@ -5,6 +5,7 @@
     "rootDir": "src",
     "tsBuildInfoFile": "lib/tsconfig.tsbuildinfo"
   },
+  "references": [{ "path": "../core" }],
   "include": ["src"],
   "exclude": ["**/__tests__/**/*"]
 }

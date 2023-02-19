@@ -4,8 +4,6 @@
 
 ```ts
 
-import type { Currency } from '@dinero.js/currencies';
-
 // @public (undocumented)
 export type AddParams<TAmount> = readonly [
 augend: Dinero<TAmount>,
@@ -72,6 +70,13 @@ export type CreateDineroOptions<TAmount> = {
     readonly calculator: Calculator<TAmount>;
     readonly formatter: Formatter<TAmount>;
     readonly onCreate?: (options: DineroOptions<TAmount>) => void;
+};
+
+// @public
+export type Currency<TAmount> = {
+    readonly code: string;
+    readonly base: TAmount | readonly TAmount[];
+    readonly exponent: TAmount;
 };
 
 // @public (undocumented)

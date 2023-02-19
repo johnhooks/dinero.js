@@ -55,6 +55,8 @@ module.exports = {
         'no-void': 'off',
         'no-console': 'off',
         'no-process-exit': 'off',
+        'promise/always-return': 'off',
+        'functional/no-try-statement': 'off',
         'functional/no-expression-statement': 'off',
         '@typescript-eslint/naming-convention': 'off',
         'jsdoc/require-description': 'off',
