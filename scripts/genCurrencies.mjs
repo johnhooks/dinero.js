@@ -51,7 +51,12 @@ export async function getCurrencyData() {
 function createCurrencyConfig({ genericType, imports, mapNumber }) {
   return {
     genericType,
-    generateFn: ({ base, code, description, exponent }) => `
+    generateFn: ({ base: maybeBases, code, description, exponent }) => {
+      const base =
+        typeof maybeBases === 'number'
+          ? mapNumber(maybeBases)
+          : `[${maybeBases.map(mapNumber).join(',')}]`;
+      return `
       import type { Currency } from '../../../../types';
       ${imports ? imports.map((text) => `${text}\n`) : ''}
       /**
@@ -61,9 +66,10 @@ function createCurrencyConfig({ genericType, imports, mapNumber }) {
        */
       export const ${code}: Currency<${genericType}> = {
         code: '${code}',
-        base: ${mapNumber(base)},
+        base: ${base},
         exponent: ${mapNumber(exponent)},
-      };`,
+      };`;
+    },
   };
 }
 
@@ -104,7 +110,7 @@ export async function build() {
       path.join(outputDir, 'index.ts'),
       format(
         currencies
-          .sort((a, b) => a.code.localeCompare(b))
+          .sort((a, b) => a.code.localeCompare(b.code))
           .map((current) => `export * from './${current.code.toLowerCase()}';`)
           .join('\n'),
         prettierOptions
@@ -140,7 +146,6 @@ export async function build() {
 const start = performance.now();
 
 build()
-  // eslint-disable-next-line  promise/always-return
   .then(() => {
     const elapsed = Math.floor((performance.now() - start) / 10) / 100;
     const msg = `Dinero.js currency generation successful\n😸  Done in ${elapsed}s`;
