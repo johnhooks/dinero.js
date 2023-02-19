@@ -1,0 +1,13 @@
+name: Build website
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Download the build artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: pkg-build-${{ github.run_id }}
+
+    - name: Build website
+      shell: bash
+      run: cd ./apps/website && pnpm build
