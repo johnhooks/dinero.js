@@ -17,7 +17,7 @@
     "build": "turbo build --filter=./packages/*",
     "format": "prettier --write .",
     "lint": "turbo lint --filter=./packages/*",
-    "prepare": "husky install && turbo prepare --filter=./packages/* && pnpm build",
+    "prepare": "husky install && turbo prepare --filter=./packages/*",
     "release": "shipjs prepare",
     "test:size": "bundlesize",
     "test:types": "tsc --noEmit",
