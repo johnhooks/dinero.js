@@ -1,3 +1,36 @@
+# [2.0.0-alpha.13](https://github.com/dinerojs/dinero.js/compare/v2.0.0-alpha.12...v2.0.0-alpha.13) (2022-12-19)
+
+
+### Bug Fixes
+
+* **toDecimal:** preserve negative sign for leading zeros ([#693](https://github.com/dinerojs/dinero.js/issues/693)) ([e6f290d](https://github.com/dinerojs/dinero.js/commit/e6f290dfd754826f20eeafff6c3a505ee19bf05f)), closes [#692](https://github.com/dinerojs/dinero.js/issues/692)
+
+
+
+# [2.0.0-alpha.12](https://github.com/dinerojs/dinero.js/compare/v2.0.0-alpha.11...v2.0.0-alpha.12) (2022-12-09)
+
+
+### Bug Fixes
+
+* **toDecimal:** teach `toDecimal` how to handle negative units ([#690](https://github.com/dinerojs/dinero.js/issues/690)) ([81c5566](https://github.com/dinerojs/dinero.js/commit/81c5566f1219707b2bfb3416e94d832170dd2cf0))
+
+
+
+# [2.0.0-alpha.11](https://github.com/dinerojs/dinero.js/compare/v2.0.0-alpha.10...v2.0.0-alpha.11) (2022-12-04)
+
+
+### Features
+
+* provide better support for non-decimal currencies ([#309](https://github.com/dinerojs/dinero.js/issues/309)) ([e7e9a19](https://github.com/dinerojs/dinero.js/commit/e7e9a19e6eb8e4ff8903867a60c1457a8d241d0c)), closes [#294](https://github.com/dinerojs/dinero.js/issues/294)
+
+
+### BREAKING CHANGES
+
+* ** the `toUnit` and the `toFormat` functions were
+removed.
+
+
+
 # [2.0.0-alpha.10](https://github.com/dinerojs/dinero.js/compare/v2.0.0-alpha.9...v2.0.0-alpha.10) (2022-11-19)
 
 ### Bug Fixes
